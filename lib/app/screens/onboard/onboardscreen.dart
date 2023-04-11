@@ -1,6 +1,6 @@
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:provider/provider.dart';
-import '../../../core/provider/onboarding_screen_provider.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+
+import '../../../core/provider/provider.dart';
 import '../../../theme/theme.dart';
 import '../../app.dart';
 
@@ -46,24 +46,18 @@ class OnboardScreen extends StatelessWidget {
               },
             ),
           ),
-          SizedBox(
-            height: 100.h,
-            child: Stack(children: [
-              Positioned(
-                right: 27.h,
-                bottom: 32.h,
-                child: Consumer<OnboardingScreenProvider>(
-                  builder: (context, value, child) {
-                    return CircularProgressIndicator(
-                      color: AppColor.blueLinear1,
-                      value: value.progressValue,
-                    );
-                  },
-                ),
-              ),
-              OnboardNextScreenBtn(provider: provider),
-            ]),
+          SmoothPageIndicator(
+            controller: provider.pageController,
+            count: 4,
+            effect:  const JumpingDotEffect(
+              dotColor: AppColor.blueLinear1,
+              activeDotColor: AppColor.purple,
+              dotHeight: 12.0,
+              dotWidth: 12.0,
+              verticalOffset: 20,
+            ),
           ),
+          OnboardNextScreenBtn(provider: provider),
         ],
       ),
     );

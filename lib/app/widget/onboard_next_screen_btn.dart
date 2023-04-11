@@ -1,9 +1,5 @@
-import 'package:fitnestx/app/screens/signup/signup_screen.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/get.dart';
-import 'package:provider/provider.dart';
-import '../../core/provider/onboarding_screen_provider.dart';
 import '../app.dart';
+import '../../core/provider/provider.dart';
 
 class OnboardNextScreenBtn extends StatelessWidget {
   const OnboardNextScreenBtn({

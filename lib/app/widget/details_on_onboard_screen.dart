@@ -32,7 +32,7 @@ class DetailsOnOnboardScreen extends StatelessWidget {
                 mainContent,
                 style: TextStyles.h1Bold.copyWith(fontFamily: 'Poppins'),
               ),
-              SizedBox(height: 15.h),
+              SizedBox(height: 5.h),
               Text(
                 description,
                 textAlign: TextAlign.start,

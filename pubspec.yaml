@@ -39,6 +39,9 @@ dependencies:
   get: ^4.6.5
   provider: ^6.0.5
   text_divider: ^1.0.0
+  smooth_page_indicator: ^1.0.1
+  flutter_charts: ^0.5.1
+  syncfusion_flutter_charts: ^21.1.39
 
 dev_dependencies:
   flutter_test:
