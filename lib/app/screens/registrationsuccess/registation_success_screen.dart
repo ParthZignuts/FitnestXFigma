@@ -23,7 +23,7 @@ class RegistattionSuccessScreen extends StatelessWidget {
                 style: TextStyles.h3Normal.copyWith(color: AppColor.gray),textAlign: TextAlign.center,
               ),
               const Spacer(),
-              CustomSubmitButton(onPressed: ()=> Get.offAll(const HomeScreen()), title: 'Go To Home'),
+              CustomSubmitButton(onPressed: ()=> Get.offAll(const MainScreen()), title: 'Go To Home'),
             ],
           ),
         ),

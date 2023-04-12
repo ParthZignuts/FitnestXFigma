@@ -1,15 +1,14 @@
 import 'dart:async';
 import 'package:fitnestx/app/app.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
-
 import '../../theme/theme.dart';
+import '../../utils/const/const_list.dart';
 
 class HeartbeatChart extends StatefulWidget {
-  final List<int> data;
-
-  const HeartbeatChart({super.key, required this.data});
+  const HeartbeatChart({super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _HeartbeatChartState createState() => _HeartbeatChartState();
 }
 
@@ -41,8 +40,8 @@ class _HeartbeatChartState extends State<HeartbeatChart> {
   // Method to generate the chart data
   List<ChartData> _getChartData() {
     List<ChartData> data = [];
-    for (int i = 0; i < widget.data.length; i++) {
-      data.add(ChartData(i, widget.data[i]));
+    for (int i = 0; i < ConstList.initialData.length; i++) {
+      data.add(ChartData(i, ConstList.initialData[i]));
     }
     return data;
   }
