@@ -15,7 +15,7 @@ class CheckViewMoreButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height:40.h,
+      height:32.h,
       width: 100.w,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(24.0),

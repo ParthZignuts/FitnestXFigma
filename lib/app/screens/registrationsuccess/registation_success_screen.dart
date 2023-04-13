@@ -15,7 +15,7 @@ class RegistattionSuccessScreen extends StatelessWidget {
               const Spacer(),
               Image.asset('assets/images/Group.png'),
               Padding(
-                padding:  EdgeInsets.only(top: 25.0.sp,bottom: 10.0.sp),
+                padding:  const EdgeInsets.only(top: 25.0,bottom: 10.0).r,
                 child: const Text('Welcome Stefani',style: TextStyles.h1UltraBold,textAlign: TextAlign.center,),
               ),
               Text(

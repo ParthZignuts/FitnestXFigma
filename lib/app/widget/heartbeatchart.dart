@@ -13,6 +13,7 @@ class HeartbeatChart extends StatefulWidget {
 }
 
 class _HeartbeatChartState extends State<HeartbeatChart> {
+
   late Timer _timer;
   late List<ChartData> _chartData;
 
@@ -49,19 +50,19 @@ class _HeartbeatChartState extends State<HeartbeatChart> {
   @override
   Widget build(BuildContext context) {
     return ClipRRect(
-      borderRadius: BorderRadius.all(Radius.circular(20.sp)),
+      borderRadius: BorderRadius.all(const Radius.circular(20).r),
       child: SizedBox(
         height: 150.h,
         child: SfCartesianChart(
-          backgroundColor: AppColor.blueLinear1,
+          backgroundColor: AppColor.lightBlueBG,
           title:ChartTitle(text: 'Heart Rate\n78 BPM',textStyle: TextStyles.p2Normal,alignment: ChartAlignment.near),
             primaryXAxis: NumericAxis(
-              borderColor: AppColor.blueLinear1,
+
             edgeLabelPlacement: EdgeLabelPlacement.none, // Remove X-axis labels
             isVisible: false,
           ),
           primaryYAxis: NumericAxis(
-            borderColor: AppColor.blueLinear1,
+
             edgeLabelPlacement: EdgeLabelPlacement.none, // Remove Y-axis labels
             isVisible: false,
           ),

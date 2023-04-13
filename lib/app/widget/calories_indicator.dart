@@ -16,7 +16,7 @@ class CaloriesIndicator extends StatelessWidget {
 
         innerWidget: (percentage) => centerDetails,
         appearance: CircularSliderAppearance(
-          size: 170.sp,
+          size: 170.r,
           angleRange: 360,
           customWidths:
           CustomSliderWidths(handlerSize: 0, progressBarWidth: 10.0),

@@ -12,7 +12,7 @@ class SignUpScreen extends StatelessWidget {
       body: SafeArea(
         child: Center(
           child: Padding(
-            padding: EdgeInsets.only(left: 15.0.sp, right: 15.0.sp),
+            padding: const EdgeInsets.only(left: 15.0, right: 15.0).r,
             child: Column(
               children: [
                 Column(
@@ -98,7 +98,7 @@ class SignUpScreen extends StatelessWidget {
                     CustomIconBtn(
                         imgUrl: 'assets/images/google.png', onPressed: () {}),
                     Padding(
-                      padding: EdgeInsets.only(left: 20.0.sp),
+                      padding: const EdgeInsets.only(left: 20.0).r,
                       child: CustomIconBtn(
                           imgUrl: 'assets/images/facebook.png',
                           onPressed: () {}),
@@ -107,7 +107,7 @@ class SignUpScreen extends StatelessWidget {
                 ),
                 const Spacer(),
                 Padding(
-                  padding: EdgeInsets.only(bottom: 15.0.sp),
+                  padding: const EdgeInsets.only(bottom: 15.0).r,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [

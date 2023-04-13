@@ -18,8 +18,8 @@ class WelcomeScreen extends StatelessWidget {
               child: Column(
                 children: [
                   Image.asset('assets/images/FitnestX.png'),
-                  const SizedBox(
-                    height: 10.0,
+                   SizedBox(
+                    height: 10.0.h,
                   ),
                   Text(
                     'Everybody Can Train',

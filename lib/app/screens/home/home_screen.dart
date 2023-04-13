@@ -1,4 +1,5 @@
 import 'package:another_stepper/widgets/another_stepper.dart';
+import 'package:fitnestx/core/provider/provider.dart';
 import 'package:fitnestx/utils/const/const_list.dart';
 import '../../../theme/theme.dart';
 import '../../app.dart';
@@ -7,12 +8,14 @@ import '../../widget/heartbeatchart.dart';
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
+  static final ScrollController _scrollController = ScrollController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.only(left: 15.0.sp, right: 15.0.sp),
+          padding: const EdgeInsets.only(left: 10.0, right: 10.0).r,
           child: Column(
             children: [
               Row(
@@ -20,7 +23,7 @@ class HomeScreen extends StatelessWidget {
                   Column(
                     children: [
                       Padding(
-                        padding: EdgeInsets.only(bottom: 8.0.sp),
+                        padding: const EdgeInsets.only(bottom: 8.0).r,
                         child: Text(
                           'Welcome Back,',
                           style: TextStyles.h3Normal
@@ -35,7 +38,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                   const Spacer(),
                   IconButton(
-                      onPressed: () {},
+                      onPressed: () => Get.offAll(const NotificationScreen()),
                       icon: const Icon(
                         Icons.notifications,
                         color: AppColor.blueLinear1,
@@ -44,8 +47,9 @@ class HomeScreen extends StatelessWidget {
               ),
               Expanded(
                 child: SingleChildScrollView(
+                  controller: _scrollController,
                   child: Padding(
-                    padding: EdgeInsets.only(top: 10.sp),
+                    padding: const EdgeInsets.only(top: 10).r,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -60,14 +64,16 @@ class HomeScreen extends StatelessWidget {
                           child: Row(
                             children: [
                               Padding(
-                                padding: EdgeInsets.only(
-                                    top: 45.0.sp, left: 40.0.sp),
+                                padding:
+                                    const EdgeInsets.only(top: 45.0, left: 40.0)
+                                        .r,
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Padding(
-                                      padding: EdgeInsets.only(bottom: 5.0.sp),
+                                      padding:
+                                          const EdgeInsets.only(bottom: 5.0).r,
                                       child: Text(
                                         'BMI(Body Mass Index)',
                                         style: TextStyles.h2Bold
@@ -80,13 +86,14 @@ class HomeScreen extends StatelessWidget {
                                           .copyWith(color: AppColor.white),
                                     ),
                                     Padding(
-                                      padding: EdgeInsets.only(top: 10.0.sp),
+                                      padding:
+                                          const EdgeInsets.only(top: 10.0).r,
                                       child: Container(
                                         height: 38.h,
                                         width: 120.w,
                                         decoration: BoxDecoration(
                                           borderRadius:
-                                              BorderRadius.circular(24.0),
+                                              BorderRadius.circular(24.0).r,
                                           gradient:
                                               const LinearGradient(colors: [
                                             AppColor.purpleLinear1,
@@ -99,7 +106,14 @@ class HomeScreen extends StatelessWidget {
                                             onSurface: Colors.transparent,
                                             shadowColor: Colors.transparent,
                                           ),
-                                          onPressed: () {},
+                                          onPressed: () {
+                                            _scrollController.animateTo(
+                                              530.0,
+                                              duration: const Duration(
+                                                  milliseconds: 500),
+                                              curve: Curves.easeInOut,
+                                            );
+                                          },
                                           child: Text(
                                             'View More',
                                             style: TextStyles.h3Bold.copyWith(
@@ -111,41 +125,57 @@ class HomeScreen extends StatelessWidget {
                                   ],
                                 ),
                               ),
-                              // Image.asset(
-                              //   'assets/images/Banner-Pie.png',
-                              //   height: 100.h,
-                              //   width: 110.w,
-                              // ),
                             ],
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsets.only(
-                              left: 20.0.sp, right: 20.0.sp, bottom: 15.0.sp),
-                          child: Row(
-                            children: [
-                              const Text(
-                                'Today Target',
-                                style: TextStyles.p1Bold,
+                          padding: const EdgeInsets.only(
+                                  left: 20.0, right: 20.0, bottom: 15.0)
+                              .r,
+                          child: Container(
+                            decoration: BoxDecoration(
+                              color: AppColor.lightBlueBG,
+                              borderRadius: BorderRadius.circular(24.0).w,
+                              border: Border.all(color: AppColor.lightBlueBG),
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0).r,
+                              child: Row(
+                                children: [
+                                  Padding(
+                                    padding:
+                                        const EdgeInsets.only(left: 12.0).r,
+                                    child: const Text(
+                                      'Today Target',
+                                      style: TextStyles.p1Bold,
+                                    ),
+                                  ),
+                                  const Spacer(),
+                                  CheckViewMoreButton(
+                                      title: 'Check',
+                                      onPressed: () => Get.offAll(
+                                          const ActivityTrackerScreen()))
+                                ],
                               ),
-                              const Spacer(),
-                              CheckViewMoreButton(
-                                  title: 'Check', onPressed: () {})
-                            ],
+                            ),
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsets.only(top: 15.0.sp),
+                          padding: const EdgeInsets.only(top: 15.0,left: 10.0,right: 10.0).r,
                           child: const Text(
                             'Activity Status',
                             style: TextStyles.h2Bold,
                             textAlign: TextAlign.left,
                           ),
                         ),
-                        const HeartbeatChart(),
                         Padding(
-                          padding: EdgeInsets.only(
-                              left: 10.0.sp, top: 30.0.sp, right: 19.0.sp),
+                          padding: const EdgeInsets.only(left: 10.0,right: 10.0).r,
+                          child: const HeartbeatChart(),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(
+                                  left: 10.0, top: 30.0, right: 19.0)
+                              .r,
                           child: SizedBox(
                             height: 531.h,
                             width: 500.w,
@@ -159,7 +189,7 @@ class HomeScreen extends StatelessWidget {
                                       height: 340.h,
                                       child: ClipRRect(
                                         borderRadius: BorderRadius.all(
-                                            Radius.circular(20.sp)),
+                                            const Radius.circular(20).w),
                                         child: const RotatedBox(
                                           quarterTurns: -1,
                                           child: LinearProgressIndicator(
@@ -173,7 +203,7 @@ class HomeScreen extends StatelessWidget {
                                   ],
                                 ),
                                 Padding(
-                                  padding: EdgeInsets.only(left: 10.0.sp),
+                                  padding: const EdgeInsets.only(left: 10.0).r,
                                   child: Column(
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
@@ -183,8 +213,9 @@ class HomeScreen extends StatelessWidget {
                                         style: TextStyles.h2Bold,
                                       ),
                                       Padding(
-                                        padding: EdgeInsets.only(
-                                            top: 8.0.sp, bottom: 8.0.sp),
+                                        padding: const EdgeInsets.only(
+                                                top: 8.0, bottom: 8.0)
+                                            .r,
                                         child: Text(
                                           '4 Liters',
                                           style: TextStyles.h1Bold.copyWith(
@@ -198,7 +229,7 @@ class HomeScreen extends StatelessWidget {
                                       ),
                                       SizedBox(
                                         height: 440.h,
-                                        width: 110.w,
+                                        width: 140.w,
                                         child: AnotherStepper(
                                           activeBarColor: AppColor.purple,
                                           activeIndex: 1,
@@ -214,9 +245,9 @@ class HomeScreen extends StatelessWidget {
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsets.only(
-                                    left: 15.0.sp,
-                                  ),
+                                  padding: const EdgeInsets.only(
+                                    left: 8.0,
+                                  ).r,
                                   child: Column(
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
@@ -228,8 +259,9 @@ class HomeScreen extends StatelessWidget {
                                             'assets/images/Sleep-Graph.png'),
                                       ),
                                       Padding(
-                                        padding: EdgeInsets.only(
-                                            top: 140.0.sp, bottom: 60.0.sp),
+                                        padding: const EdgeInsets.only(
+                                                top: 140.0, bottom: 60.0)
+                                            .r,
                                         child: const SleepAndCaloriesGraph(
                                           title: 'Calories',
                                           subTitle: '760 kCal',
@@ -249,21 +281,30 @@ class HomeScreen extends StatelessWidget {
                           itemCount: ConstList.workOutlist.length,
                           itemBuilder: (context, index) {
                             return ListTile(
-                              leading: Image.asset('assets/images/Workout$index.png'),
+                              leading: Image.asset(
+                                  'assets/images/Workout$index.png'),
                               trailing: IconButton(
-                                onPressed: (){},
-                                icon: const Icon(Icons.keyboard_arrow_right_outlined,color: AppColor.purple),
+                                onPressed: () {},
+                                icon: const Icon(
+                                    Icons.keyboard_arrow_right_outlined,
+                                    color: AppColor.purple),
                               ),
                               title: Text(ConstList.workOutlist[index]),
                               subtitle: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text(ConstList.caloriesBurnList[index],style: TextStyles.p3Normal,),
+                                  Text(
+                                    ConstList.caloriesBurnList[index],
+                                    style: TextStyles.p3Normal,
+                                  ),
                                   const SizedBox(height: 4),
-                                   LinearProgressIndicator(
-                                    value:(index/2),
-                                   backgroundColor: AppColor.white,
-                                    valueColor: const AlwaysStoppedAnimation<Color>(AppColor.purple,),
+                                  LinearProgressIndicator(
+                                    value: (index / 2),
+                                    backgroundColor: AppColor.white,
+                                    valueColor:
+                                        const AlwaysStoppedAnimation<Color>(
+                                      AppColor.purple,
+                                    ),
                                   ),
                                 ],
                               ),

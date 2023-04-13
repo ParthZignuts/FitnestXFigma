@@ -12,7 +12,7 @@ class LoginScreen extends StatelessWidget {
       body: SafeArea(
         child: Center(
           child: Padding(
-            padding: EdgeInsets.only(left: 15.0.sp, right: 15.0.sp),
+            padding: const EdgeInsets.only(left: 15.0, right: 15.0).r,
             child: Column(
               children: [
                 Column(
@@ -28,7 +28,7 @@ class LoginScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-                Padding(padding: EdgeInsets.only(top: 30.0.sp)),
+                Padding(padding: const EdgeInsets.only(top: 30.0).r),
                 const InputFormField(
                   hintText: 'Email',
                   icon: Icon(
@@ -68,14 +68,14 @@ class LoginScreen extends StatelessWidget {
                     ),
                     color: AppColor.blueLinear2),
                 Padding(
-                  padding: EdgeInsets.only(top: 25.0.sp),
+                  padding: const EdgeInsets.only(top: 25.0).r,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       CustomIconBtn(
                           imgUrl: 'assets/images/google.png', onPressed: () {}),
                       Padding(
-                        padding: EdgeInsets.only(left: 20.0.sp),
+                        padding: const EdgeInsets.only(left: 20.0).r,
                         child: CustomIconBtn(
                             imgUrl: 'assets/images/facebook.png',
                             onPressed: () {}),
@@ -84,7 +84,7 @@ class LoginScreen extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.only(bottom: 15.0.sp, top: 25.0.sp),
+                  padding: const EdgeInsets.only(bottom: 15.0, top: 25.0).r,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [

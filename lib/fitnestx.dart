@@ -20,6 +20,8 @@ class FitnestX extends StatelessWidget {
             ChangeNotifierProvider(
               create: (context) => SignupScreenProvider(),
             ),
+            ChangeNotifierProvider(create: (context) => ActivityTrackerProcider(),),
+            ChangeNotifierProvider(create: (context) => HomeScreenProvider(),)
           ],
           child: GetMaterialApp(
             theme: ThemeData(
@@ -31,6 +33,7 @@ class FitnestX extends StatelessWidget {
             routes: {
               '/onboard': (context) => const OnboardScreen(),
               '/': (context) => const SplashScreen(),
+              // '/': (context) => const MainScreen(),
             },
             initialRoute: '/',
           ),

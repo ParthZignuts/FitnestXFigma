@@ -16,7 +16,7 @@ class OnboardNextScreenBtn extends StatelessWidget {
       return Align(
         alignment: Alignment.bottomRight,
         child: Padding(
-          padding: EdgeInsets.only(bottom: 40.0.sp, right: 35.0.sp),
+          padding: const EdgeInsets.only(bottom: 40.0, right: 35.0).r,
           child: GestureDetector(
             onTap: () {
               if (provider.pageIndex < 3) {
@@ -29,7 +29,7 @@ class OnboardNextScreenBtn extends StatelessWidget {
               }
             },
             child: CircleAvatar(
-              radius: 25.0.sp,
+              radius: 25.0.r,
               child: Image.asset('assets/images/rightArrow.png'),
             ),
           ),

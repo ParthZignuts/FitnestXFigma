@@ -21,7 +21,7 @@ class SleepAndCaloriesGraph extends StatelessWidget {
       children: [
         Text(title, style: TextStyles.h2Bold),
         Padding(
-          padding: EdgeInsets.only(top: 8.0.sp, bottom: 8.0.sp),
+          padding: const EdgeInsets.only(top: 8.0, bottom: 8.0).r,
           child: Text(
             subTitle,
             style: TextStyles.h1Bold.copyWith(color: AppColor.blueLinear1),

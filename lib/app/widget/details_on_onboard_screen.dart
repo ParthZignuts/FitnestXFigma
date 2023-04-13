@@ -24,7 +24,7 @@ class DetailsOnOnboardScreen extends StatelessWidget {
           height: 350.h,
         ),
         Padding(
-          padding: EdgeInsets.only(top: 45.0.sp,left: 20.0.sp,right: 20.0.sp),
+          padding: const EdgeInsets.only(top: 45.0,left: 20.0,right: 20.0).r,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

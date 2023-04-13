@@ -26,7 +26,7 @@ class SignUpScreen3 extends StatelessWidget {
                     style: TextStyles.h1UltraBold,
                   ),
                   Padding(
-                    padding: EdgeInsets.only(top: 10.0.sp),
+                    padding: const EdgeInsets.only(top: 10.0).r,
                     child: Text(
                       'It will help us to choose a best\nprogram for you',
                       style: TextStyles.h3Normal.copyWith(

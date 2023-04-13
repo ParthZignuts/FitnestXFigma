@@ -23,7 +23,7 @@ class SignUpScreen2 extends StatelessWidget {
             fit: BoxFit.fill,
           ),
           Padding(
-            padding: EdgeInsets.only(top: 8.0.sp, bottom: 8.0.sp),
+            padding: const EdgeInsets.only(top: 8.0, bottom: 8.0).r,
             child: const Text(
               'Let\'s complete your profile',
               style: TextStyles.h1Bold,
@@ -34,18 +34,18 @@ class SignUpScreen2 extends StatelessWidget {
             style: TextStyles.h3Normal.copyWith(color: AppColor.gray),
           ),
           Padding(
-            padding: EdgeInsets.only(
-              left: 30.0.sp,
-              right: 30.0.sp,
-              top: 10.sp,
-            ),
+            padding: const EdgeInsets.only(
+              left: 30.0,
+              right: 30.0,
+              top: 10,
+            ).r,
             child: Column(
               children: [
                 Consumer<SignupScreenProvider>(
                   builder: (context, value, child) {
                     return DropdownButtonFormField(
                       dropdownColor: AppColor.blueLinear1,
-                      borderRadius: BorderRadius.circular(24.0.sp),
+                      borderRadius: BorderRadius.circular(24.0).r,
                       focusColor: AppColor.white,
                       hint: const Text('Choose Gender'),
                       value: value.newGenderValue,

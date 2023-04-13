@@ -21,7 +21,7 @@ class CustomIconBtn extends StatelessWidget {
         width: 50.w,
         decoration: BoxDecoration(
           border: Border.all(),
-          borderRadius: BorderRadius.circular(12.0.sp),
+          borderRadius: BorderRadius.circular(12.0).r,
         ),
         child: Image.asset(imgUrl),
       ),

@@ -13,4 +13,7 @@ export './profile/profile_screen.dart';
 export './progressreport/progress_report_screen.dart';
 export './progressphoto/progress_photo_screen.dart';
 export './search/search_screen.dart';
+export './notification/notification_screen.dart';
+export './activitytracker/activity_tracker_screen.dart';
+export './home/home_screen2.dart';
 export 'signup/signup_screen.dart';

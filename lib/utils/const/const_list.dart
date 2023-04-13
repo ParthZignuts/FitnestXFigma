@@ -5,7 +5,7 @@ import '../../theme/theme.dart';
 
 class ConstList {
   static final List<Widget> buildScreen = [
-    const HomeScreen(),
+    const HomeScreen2(),
     const ProgressPhotoScreen(),
     const SearchScreen(),
     const ProgressReportScreen(),
@@ -94,7 +94,7 @@ class ConstList {
     StepperData(
         title: StepperText(
           "6am - 8am",
-          textStyle: TextStyles.h2Bold.copyWith(color: AppColor.gray),
+          textStyle: TextStyles.h3Normal.copyWith(color: AppColor.gray),
         ),
         subtitle: StepperText("600ml",
             textStyle: TextStyles.p1Normal.copyWith(color: AppColor.purple)),
@@ -107,7 +107,7 @@ class ConstList {
     StepperData(
         title: StepperText(
           "9am - 11am",
-          textStyle: TextStyles.h2Bold.copyWith(color: AppColor.gray),
+          textStyle: TextStyles.h3Normal.copyWith(color: AppColor.gray),
         ),
         subtitle: StepperText("500ml",
             textStyle: TextStyles.p1Normal.copyWith(color: AppColor.purple)),
@@ -120,7 +120,7 @@ class ConstList {
     StepperData(
         title: StepperText(
           "11am - 2pm ",
-          textStyle: TextStyles.h2Bold.copyWith(color: AppColor.gray),
+          textStyle: TextStyles.h3Normal.copyWith(color: AppColor.gray),
         ),
         subtitle: StepperText("1000ml",
             textStyle: TextStyles.p1Normal.copyWith(color: AppColor.purple)),
@@ -133,7 +133,7 @@ class ConstList {
     StepperData(
         title: StepperText(
           "2pm - 4pm",
-          textStyle: TextStyles.h2Bold.copyWith(color: AppColor.gray),
+          textStyle: TextStyles.h3Normal.copyWith(color: AppColor.gray),
         ),
         subtitle: StepperText("700ml",
             textStyle: TextStyles.p1Normal.copyWith(color: AppColor.purple)),
@@ -146,7 +146,7 @@ class ConstList {
     StepperData(
         title: StepperText(
           "4pm - now ",
-          textStyle: TextStyles.h2Bold.copyWith(color: AppColor.gray),
+          textStyle: TextStyles.h3Normal.copyWith(color: AppColor.gray),
         ),
         subtitle: StepperText("900ml",
             textStyle: TextStyles.p1Normal.copyWith(color: AppColor.purple)),
@@ -178,10 +178,51 @@ class ConstList {
     79,
   ];
 }
-// iconWidget: Container(
-// padding: const EdgeInsets.all(8),
-// decoration: const BoxDecoration(
-// color: AppColor.purple,
-// borderRadius: BorderRadius.all(Radius.circular(30))),
-// child: const Icon(Icons.circle, color: AppColor.purple),
-// )
+
+final List<String> notificationTitle = [
+  'Hey, it’s time for lunch',
+  'Don’t miss your lowerbody workout',
+  'Hey, let’s add some meals for your b..',
+  'Congratulations, You have finished A..',
+  'Hey, it’s time for lunch',
+  'Ups, You have missed your Lowerbo...',
+  'Hey, it’s time for lunch',
+  'Don’t miss your lowerbody workout',
+  'Hey, let’s add some meals for your b..',
+  'Congratulations, You have finished A..',
+  'Hey, it’s time for lunch',
+  'Ups, You have missed your Lowerbo...',
+];
+
+final List<String> notificationTime = [
+  'About 1 minutes ago',
+  'About 3 hours ago',
+  'About 3 hours ago',
+  '29 May',
+  '8 April',
+  '3 April',
+  'About 1 minutes ago',
+  'About 3 hours ago',
+  'About 3 hours ago',
+  '29 May',
+  '8 April',
+  '3 April',
+];
+
+final List<String> latestActivityTitle = [
+  'Drinking 300ml Water',
+  'Eat Snack (Fitbar)',
+  'Drinking 300ml Water',
+  'Eat Snack (Fitbar)',
+  'Drinking 300ml Water',
+  'Eat Snack (Fitbar)',
+];
+
+final List<String> latestAcitivitySubtitle = [
+  'About 3 minutes ago',
+  'About 10 minutes ago',
+  'About 3 minutes ago',
+  'About 10 minutes ago',
+  'About 3 minutes ago',
+  'About 10 minutes ago',
+];
