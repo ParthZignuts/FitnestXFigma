@@ -6,9 +6,9 @@ import '../../theme/theme.dart';
 class ConstList {
   static final List<Widget> buildScreen = [
     const HomeScreen2(),
-    const ProgressPhotoScreen(),
-    const SearchScreen(),
     const ProgressReportScreen(),
+    const SearchScreen(),
+    const ProgressPhotoScreen(),
     const ProfileScreen(),
   ];
   static final List<PersistentBottomNavBarItem> bottomNavbarItems = [

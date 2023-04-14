@@ -9,4 +9,7 @@ export './calories_indicator.dart';
 export './check_viewmore_button.dart';
 export 'package:text_divider/text_divider.dart';
 export './target_widget.dart';
+export './profile_listtile.dart';
+export './title_with_viewmore.dart';
+export './gallery_listview.dart';
 export './custom_appbar.dart';

@@ -16,7 +16,7 @@ class CheckViewMoreButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height:32.h,
-      width: 100.w,
+      width: 125.w,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(24.0),
         gradient: const LinearGradient(colors: [

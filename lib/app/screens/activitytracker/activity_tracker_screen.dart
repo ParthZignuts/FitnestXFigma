@@ -25,6 +25,7 @@ class ActivityTrackerScreen extends StatelessWidget {
                   }),
               Expanded(
                 child: SingleChildScrollView(
+                  physics: const BouncingScrollPhysics(),
                   child: Column(
                     children: [
                       Padding(
@@ -54,7 +55,6 @@ class ActivityTrackerScreen extends StatelessWidget {
                                         width: 35.0.w,
                                         height: 35.0.h,
                                         decoration: BoxDecoration(
-                                          // border: Border.all(c),
                                           borderRadius:
                                               BorderRadius.circular(10.0).w,
                                           gradient:
@@ -79,17 +79,17 @@ class ActivityTrackerScreen extends StatelessWidget {
                                 padding:  const EdgeInsets.only(
                                         right: 15.0, left: 15.0).r,
                                 child: Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceEvenly,
                                   children: const [
                                     TargetWidget(
                                         title: '8L',
                                         subTitle: 'Water Intake',
                                         imgSrc: 'assets/images/glass 1.png'),
+                                    Spacer(),
                                     TargetWidget(
                                         title: '2400',
                                         subTitle: 'Foot Steps',
                                         imgSrc: 'assets/images/boots 1.png'),
+                                    Spacer(),
                                   ],
                                 ),
                               ),
@@ -112,25 +112,7 @@ class ActivityTrackerScreen extends StatelessWidget {
                         ),
                       ),
                       Image.asset('assets/images/Graph.png'),
-                      Row(
-                        children: [
-                          const Text(
-                            "Latest Activity",
-                            style: TextStyles.h2Bold,
-                          ),
-                          const Spacer(),
-                          GestureDetector(
-                            onTap: () {
-                              provider.showMore(true);
-                            },
-                            child: Text(
-                              'See more',
-                              style: TextStyles.h3Bold
-                                  .copyWith(color: AppColor.gray),
-                            ),
-                          ),
-                        ],
-                      ),
+                      TitleWithViewMore(provider: provider,title: 'Latest Activity'),
                       Consumer<ActivityTrackerProcider>(
                         builder: (context, value, child) {
                           return ListView.builder(

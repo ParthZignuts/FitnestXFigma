@@ -9,7 +9,13 @@ class AppColor{
 
   static const purple=Color(0xFFC58BF2);
   static const purpleLinear1=Color(0xFFEEA4AC);
+
   static const purpleLinear2=Color(0xFFC58BF2);
   static const lightBlueBG=Color(0xFFEAF0FF);
+
+  static const lightPink=Color(0xFFFFE5E5);
+  static const red=Color(0xFFEF0606);
+
+  static const black=Color(0xFF000000);
 
 }

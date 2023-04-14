@@ -12,6 +12,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final provider = Provider.of<ActivityTrackerProcider>(context);
     return Scaffold(
       body: SafeArea(
         child: Padding(
@@ -47,6 +48,7 @@ class HomeScreen extends StatelessWidget {
               ),
               Expanded(
                 child: SingleChildScrollView(
+                  physics: const BouncingScrollPhysics(),
                   controller: _scrollController,
                   child: Padding(
                     padding: const EdgeInsets.only(top: 10).r,
@@ -153,15 +155,20 @@ class HomeScreen extends StatelessWidget {
                                   const Spacer(),
                                   CheckViewMoreButton(
                                       title: 'Check',
-                                      onPressed: () => Get.offAll(
-                                          const ActivityTrackerScreen()))
+                                      onPressed: () {
+                                        provider.showMore(false);
+                                        Get.offAll(
+                                            const ActivityTrackerScreen());
+                                      })
                                 ],
                               ),
                             ),
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.only(top: 15.0,left: 10.0,right: 10.0).r,
+                          padding: const EdgeInsets.only(
+                                  top: 15.0, left: 10.0, right: 10.0)
+                              .r,
                           child: const Text(
                             'Activity Status',
                             style: TextStyles.h2Bold,
@@ -169,7 +176,8 @@ class HomeScreen extends StatelessWidget {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.only(left: 10.0,right: 10.0).r,
+                          padding:
+                              const EdgeInsets.only(left: 10.0, right: 10.0).r,
                           child: const HeartbeatChart(),
                         ),
                         Padding(
@@ -275,39 +283,47 @@ class HomeScreen extends StatelessWidget {
                             ),
                           ),
                         ),
-                        ListView.builder(
-                          scrollDirection: Axis.vertical,
-                          shrinkWrap: true,
-                          itemCount: ConstList.workOutlist.length,
-                          itemBuilder: (context, index) {
-                            return ListTile(
-                              leading: Image.asset(
-                                  'assets/images/Workout$index.png'),
-                              trailing: IconButton(
-                                onPressed: () {},
-                                icon: const Icon(
-                                    Icons.keyboard_arrow_right_outlined,
-                                    color: AppColor.purple),
-                              ),
-                              title: Text(ConstList.workOutlist[index]),
-                              subtitle: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    ConstList.caloriesBurnList[index],
-                                    style: TextStyles.p3Normal,
+                        TitleWithViewMore(
+                            title: 'Latest Workout', provider: provider),
+                        Consumer<ActivityTrackerProcider>(
+                          builder: (context, value, child) {
+                            return ListView.builder(
+                              physics: const NeverScrollableScrollPhysics(),
+                              scrollDirection: Axis.vertical,
+                              shrinkWrap: true,
+                              itemCount: value.isShowMore ? 4 : 1,
+                              itemBuilder: (context, index) {
+                                return ListTile(
+                                  leading: Image.asset(
+                                      'assets/images/Workout$index.png'),
+                                  trailing: IconButton(
+                                    onPressed: () {},
+                                    icon: const Icon(
+                                        Icons.keyboard_arrow_right_outlined,
+                                        color: AppColor.purple),
                                   ),
-                                  const SizedBox(height: 4),
-                                  LinearProgressIndicator(
-                                    value: (index / 2),
-                                    backgroundColor: AppColor.white,
-                                    valueColor:
-                                        const AlwaysStoppedAnimation<Color>(
-                                      AppColor.purple,
-                                    ),
+                                  title: Text(ConstList.workOutlist[index]),
+                                  subtitle: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        ConstList.caloriesBurnList[index],
+                                        style: TextStyles.p3Normal,
+                                      ),
+                                      const SizedBox(height: 4),
+                                      LinearProgressIndicator(
+                                        value: (index / 2),
+                                        backgroundColor: AppColor.white,
+                                        valueColor:
+                                            const AlwaysStoppedAnimation<Color>(
+                                          AppColor.purple,
+                                        ),
+                                      ),
+                                    ],
                                   ),
-                                ],
-                              ),
+                                );
+                              },
                             );
                           },
                         )

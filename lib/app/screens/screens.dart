@@ -16,4 +16,5 @@ export './search/search_screen.dart';
 export './notification/notification_screen.dart';
 export './activitytracker/activity_tracker_screen.dart';
 export './home/home_screen2.dart';
+export './compare/compare_screen.dart';
 export 'signup/signup_screen.dart';
