@@ -3,7 +3,7 @@ import '../../../app/app.dart';
 class SignupScreenProvider extends ChangeNotifier {
   bool rememberMe = false;
   bool isVisible = true;
-  String newGenderValue='Choose Gender';
+  String newGenderValue = 'Choose Gender';
   int pageIndex = 0;
   PageController pageController = PageController();
 
@@ -17,11 +17,10 @@ class SignupScreenProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-  changeSelectedGender(String value){
-    newGenderValue=value;
+  changeSelectedGender(String value) {
+    newGenderValue = value;
     notifyListeners();
   }
-
 
   void onTabChanged() {
     pageController.jumpToPage(pageIndex);

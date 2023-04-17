@@ -6,7 +6,7 @@ import '../../theme/theme.dart';
 class ConstList {
   static final List<Widget> buildScreen = [
     const HomeScreen2(),
-    const ProgressReportScreen(),
+    const WorkoutTrackerScreen(),
     const SearchScreen(),
     const ProgressPhotoScreen(),
     const ProfileScreen(),

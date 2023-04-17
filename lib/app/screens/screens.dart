@@ -10,7 +10,7 @@ export './registrationsuccess/registation_success_screen.dart';
 export './home/home_screen.dart';
 export './mainscreen/main_screen.dart';
 export './profile/profile_screen.dart';
-export './progressreport/progress_report_screen.dart';
+export './workouttracker/workout_tracker_screen.dart';
 export './progressphoto/progress_photo_screen.dart';
 export './search/search_screen.dart';
 export './notification/notification_screen.dart';

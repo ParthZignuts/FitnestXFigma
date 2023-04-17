@@ -130,41 +130,13 @@ class HomeScreen extends StatelessWidget {
                             ],
                           ),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.only(
-                                  left: 20.0, right: 20.0, bottom: 15.0)
-                              .r,
-                          child: Container(
-                            decoration: BoxDecoration(
-                              color: AppColor.lightBlueBG,
-                              borderRadius: BorderRadius.circular(24.0).w,
-                              border: Border.all(color: AppColor.lightBlueBG),
-                            ),
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0).r,
-                              child: Row(
-                                children: [
-                                  Padding(
-                                    padding:
-                                        const EdgeInsets.only(left: 12.0).r,
-                                    child: const Text(
-                                      'Today Target',
-                                      style: TextStyles.p1Bold,
-                                    ),
-                                  ),
-                                  const Spacer(),
-                                  CheckViewMoreButton(
-                                      title: 'Check',
-                                      onPressed: () {
-                                        provider.showMore(false);
-                                        Get.offAll(
-                                            const ActivityTrackerScreen());
-                                      })
-                                ],
-                              ),
-                            ),
-                          ),
-                        ),
+                        LeadingTitleAndButton(
+                            onPressed: () {
+                              provider.showMore(false);
+                              Get.offAll(const ActivityTrackerScreen());
+                            },
+                            btnTitle: 'Check',
+                            leadingTitle: 'Today Target'),
                         Padding(
                           padding: const EdgeInsets.only(
                                   top: 15.0, left: 10.0, right: 10.0)

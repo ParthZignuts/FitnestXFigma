@@ -86,6 +86,7 @@ class ActivityTrackerScreen extends StatelessWidget {
                                         imgSrc: 'assets/images/glass 1.png'),
                                     Spacer(),
                                     TargetWidget(
+
                                         title: '2400',
                                         subTitle: 'Foot Steps',
                                         imgSrc: 'assets/images/boots 1.png'),
