@@ -1,6 +1,5 @@
 import 'package:fitnestx/app/app.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:switcher_button/switcher_button.dart';
 import '../../../theme/theme.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -175,7 +174,9 @@ class ProfileScreen extends StatelessWidget {
                               offColor: AppColor.blueLinear1,
                               onColor: AppColor.purpleLinear2,
                               value: true,
-                              onChange: (value) {},
+                              onChange: (value) {
+                                Vibration.vibrate(duration:2000);
+                              },
                             ),
                           ),
                           Padding(

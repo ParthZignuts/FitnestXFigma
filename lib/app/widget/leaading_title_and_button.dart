@@ -26,6 +26,7 @@ class LeadingTitleAndButton extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(8.0).r,
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Padding(
                 padding: const EdgeInsets.only(left: 12.0).r,

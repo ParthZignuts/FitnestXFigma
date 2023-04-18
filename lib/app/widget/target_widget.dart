@@ -18,8 +18,10 @@ class TargetWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding:
-      EdgeInsets.only(bottom: 10.0.sp, left: 8.0,right: 8.0).r,
+      EdgeInsets.only(bottom: 10.0.sp).r,
       child: Container(
+        height: 65.h,
+        width: 150.w,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(24.0).w,
           color: AppColor.white,

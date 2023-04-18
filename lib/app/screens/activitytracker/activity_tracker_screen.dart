@@ -76,21 +76,19 @@ class ActivityTrackerScreen extends StatelessWidget {
                                 ),
                               ),
                               Padding(
-                                padding:  const EdgeInsets.only(
-                                        right: 15.0, left: 15.0).r,
+                                padding: const EdgeInsets.only(
+                                        right: 10.0, left: 10.0).r,
                                 child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                                   children: const [
                                     TargetWidget(
                                         title: '8L',
                                         subTitle: 'Water Intake',
                                         imgSrc: 'assets/images/glass 1.png'),
-                                    Spacer(),
                                     TargetWidget(
-
                                         title: '2400',
                                         subTitle: 'Foot Steps',
                                         imgSrc: 'assets/images/boots 1.png'),
-                                    Spacer(),
                                   ],
                                 ),
                               ),
@@ -113,7 +111,8 @@ class ActivityTrackerScreen extends StatelessWidget {
                         ),
                       ),
                       Image.asset('assets/images/Graph.png'),
-                      TitleWithViewMore(provider: provider,title: 'Latest Activity'),
+                      TitleWithViewMore(
+                          provider: provider, title: 'Latest Activity'),
                       Consumer<ActivityTrackerProcider>(
                         builder: (context, value, child) {
                           return ListView.builder(

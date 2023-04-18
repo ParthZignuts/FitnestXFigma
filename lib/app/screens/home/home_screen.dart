@@ -138,9 +138,7 @@ class HomeScreen extends StatelessWidget {
                             btnTitle: 'Check',
                             leadingTitle: 'Today Target'),
                         Padding(
-                          padding: const EdgeInsets.only(
-                                  top: 15.0, left: 10.0, right: 10.0)
-                              .r,
+                          padding: const EdgeInsets.only(top: 15.0).r,
                           child: const Text(
                             'Activity Status',
                             style: TextStyles.h2Bold,
@@ -154,8 +152,7 @@ class HomeScreen extends StatelessWidget {
                         ),
                         Padding(
                           padding: const EdgeInsets.only(
-                                  left: 10.0, top: 30.0, right: 19.0)
-                              .r,
+                                  left: 10.0, top: 30.0, right: 19.0).r,
                           child: SizedBox(
                             height: 531.h,
                             width: 500.w,

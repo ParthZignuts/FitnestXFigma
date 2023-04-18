@@ -1,7 +1,5 @@
 import 'package:fitnestx/app/app.dart';
-import 'package:fitnestx/core/provider/provider.dart';
 import 'package:flutter/cupertino.dart';
-
 import '../../../theme/theme.dart';
 
 class CompareScreen extends StatelessWidget {

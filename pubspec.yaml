@@ -47,6 +47,7 @@ dependencies:
   persistent_bottom_nav_bar: ^5.0.2
   lottie: ^2.3.2
   switcher_button: ^0.0.4
+  vibration: ^1.7.6
 
 dev_dependencies:
   flutter_test:
