@@ -19,7 +19,7 @@ class LeadingTitleAndButton extends StatelessWidget {
       padding: const EdgeInsets.only(left: 20.0, right: 20.0, bottom: 15.0).r,
       child: Container(
         decoration: BoxDecoration(
-          color: AppColor.lightBlueBG,
+          // color: AppColor.lightBlueBG,
           borderRadius: BorderRadius.circular(24.0).w,
           border: Border.all(color: AppColor.lightBlueBG),
         ),
@@ -32,7 +32,7 @@ class LeadingTitleAndButton extends StatelessWidget {
                 padding: const EdgeInsets.only(left: 12.0).r,
                 child: Text(
                   leadingTitle,
-                  style: TextStyles.p1Bold,
+                  style: TextStyles.p1Normal,
                 ),
               ),
               const Spacer(),

@@ -1,9 +1,14 @@
 import 'package:fitnestx/fitnestx.dart';
+import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/material.dart';
+import 'core/provider/provider.dart';
 import 'theme/theme.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    ChangeNotifierProvider<ActivityTrackerProcider>(
+        create: (_) => ActivityTrackerProcider(), child: const MyApp()),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -12,8 +17,10 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+
       title: 'FitnestX',
       home: Builder(
         builder: (BuildContext context) {

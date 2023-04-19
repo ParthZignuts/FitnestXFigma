@@ -9,14 +9,14 @@ class SignUpScreen3 extends StatelessWidget {
   Widget build(BuildContext context) {
     final provider = Provider.of<SignupScreenProvider>(context);
     return Scaffold(
-      backgroundColor: AppColor.white,
+      // backgroundColor: AppColor.white,
       body: SafeArea(
         child: Container(
           decoration: const BoxDecoration(
               image: DecorationImage(
-            fit: BoxFit.fill,
-            image: AssetImage('assets/images/signupBg.png'),
-          )),
+                fit: BoxFit.fill,
+                image: AssetImage('assets/images/signupBg.png'),
+              )),
           child: Column(
             children: [
               Column(

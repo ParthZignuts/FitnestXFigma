@@ -1,4 +1,5 @@
 import 'package:fitnestx/app/app.dart';
+import 'package:fitnestx/core/provider/provider.dart';
 import 'package:fitnestx/theme/app_color.dart';
 import 'package:fitnestx/utils/const/const_list.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
@@ -10,13 +11,17 @@ class MainScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PersistentTabView(
-      context,
-      floatingActionButton: const Icon(Icons.chat),
-      screens: ConstList.buildScreen,
-      items: ConstList.bottomNavbarItems,
-      backgroundColor: AppColor.white,
-      navBarStyle: NavBarStyle.style15,
+    return Consumer<ActivityTrackerProcider>(
+      builder: (context, value, child) {
+        return PersistentTabView(
+          context,
+          floatingActionButton: const Icon(Icons.chat),
+          screens: ConstList.buildScreen,
+          items: ConstList.bottomNavbarItems,
+          backgroundColor: value.switchTheme?AppColor.black: AppColor.white,
+          navBarStyle: NavBarStyle.style15,
+        );
+      },
     );
   }
 }

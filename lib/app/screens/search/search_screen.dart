@@ -1,4 +1,5 @@
 import 'package:fitnestx/app/app.dart';
+import '../../../core/provider/provider.dart';
 import '../../../theme/theme.dart';
 
 class SearchScreen extends StatelessWidget {
@@ -6,12 +7,15 @@ class SearchScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final provider=Provider.of<ActivityTrackerProcider>(context);
     return SafeArea(
       child: DefaultTabController(
         length: 2,
         child: Scaffold(
           appBar: AppBar(
-            backgroundColor: AppColor.white,
+            backgroundColor: provider.switchTheme?AppColor.lightBlack : AppColor.white,
+            centerTitle: true,
+            // backgroundColor: AppColor.white,
             title: Text(
               'FitnestX',
               style: TextStyles.h2Bold.copyWith(color: AppColor.blueLinear1),
@@ -25,6 +29,8 @@ class SearchScreen extends StatelessWidget {
                   indicatorSize: TabBarIndicatorSize.label,
                   indicatorColor: AppColor.blueLinear1,
                   labelStyle: TextStyles.h2Normal,
+                  labelColor: AppColor.blueLinear1,
+                  unselectedLabelColor:  AppColor.blueLinear1,
                   tabs: [
                     Tab(
                       text: 'Workout',

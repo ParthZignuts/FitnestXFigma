@@ -24,7 +24,6 @@ class InputFormField extends StatelessWidget {
         cursorColor: AppColor.blueLinear1,
         decoration: InputDecoration(
           border: InputBorder.none,
-          fillColor: AppColor.purple,
           hintText: hintText,
           prefixIcon: icon,
           suffixIcon: Consumer<SignupScreenProvider>(

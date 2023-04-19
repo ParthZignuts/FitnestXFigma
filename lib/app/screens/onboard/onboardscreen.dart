@@ -11,7 +11,7 @@ class OnboardScreen extends StatelessWidget {
     final provider =
         Provider.of<OnboardingScreenProvider>(context, listen: false);
     return Scaffold(
-      backgroundColor: AppColor.white,
+      // backgroundColor: AppColor.white,
       body: Column(
         children: [
           Expanded(
@@ -37,7 +37,7 @@ class OnboardScreen extends StatelessWidget {
                     imgSrc: 'assets/images/onboardscreen3.png',
                     mainContent: 'Improve Sleep \nQuality',
                     description:
-                        'Improve the quality of your sleep withus,\ngood quality sleep can bring a good mood \nin the morning '),
+                        'Improve the quality of your sleep withus,\ngood quality sleep can bring a good mood  '),
               ],
               onPageChanged: (int index) {
                 provider.pageIndex = index;

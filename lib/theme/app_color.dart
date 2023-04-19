@@ -17,5 +17,6 @@ class AppColor{
   static const red=Color(0xFFEF0606);
 
   static const black=Color(0xFF000000);
+  static const lightBlack=Color(0xFF121212);
 
 }

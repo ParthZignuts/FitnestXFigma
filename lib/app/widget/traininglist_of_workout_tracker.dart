@@ -45,8 +45,8 @@ class TrainingListOfWorkoutTracker extends StatelessWidget {
                         Padding(
                           padding: const EdgeInsets.only(top: 10.0).r,
                           child: Container(
-                            height: 28.h,
-                            width: 125.w,
+                            height: 30.h,
+                            width: 135.w,
                             decoration: BoxDecoration(
                               color: AppColor.white,
                               borderRadius: BorderRadius.circular(24.0).w,

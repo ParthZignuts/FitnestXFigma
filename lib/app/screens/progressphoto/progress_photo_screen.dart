@@ -107,7 +107,7 @@ class ProgressPhotoScreen extends StatelessWidget {
                                                 top: 20.0, bottom: 10.0)
                                             .r,
                                         child: Container(
-                                          width: 135.w,
+                                          width: 138.w,
                                           height: 35.h,
                                           decoration: BoxDecoration(
                                             borderRadius:
@@ -155,9 +155,9 @@ class ProgressPhotoScreen extends StatelessWidget {
                               children: [
                                 Padding(
                                   padding: const EdgeInsets.only(left: 12.0).r,
-                                  child: const Text(
+                                  child:  Text(
                                     'Compare My Photo',
-                                    style: TextStyles.p1Bold,
+                                    style: TextStyles.p1Bold.copyWith(color: AppColor.black),
                                   ),
                                 ),
                                 const Spacer(),

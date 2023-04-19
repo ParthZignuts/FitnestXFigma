@@ -1,6 +1,6 @@
 import 'package:fitnestx/core/provider/provider.dart';
-import 'package:fitnestx/theme/app_color.dart';
 import './app/app.dart';
+import 'package:flex_color_scheme/flex_color_scheme.dart';
 
 class FitnestX extends StatelessWidget {
   const FitnestX({Key? key}) : super(key: key);
@@ -25,14 +25,20 @@ class FitnestX extends StatelessWidget {
             ),
             ChangeNotifierProvider(
               create: (context) => HomeScreenProvider(),
-            )
-          ],
-          child: GetMaterialApp(
-            theme: ThemeData(
-              primaryColor: AppColor.blueLinear1,
             ),
-            home: const SplashScreen(),
-            // home: const MainScreen(),
+          ],
+          child: Consumer<ActivityTrackerProcider>(
+            builder: (context, value, child) {
+              return GetMaterialApp(
+                theme: value.switchTheme
+                    ? FlexColorScheme.dark(scheme: FlexScheme.purpleBrown)
+                        .toTheme
+                    : FlexColorScheme.light(scheme: FlexScheme.purpleBrown)
+                        .toTheme,
+                home: const SplashScreen(),
+                // home: const MainScreen(),
+              );
+            },
           ),
         );
       },

@@ -1,5 +1,6 @@
 import 'package:fitnestx/app/app.dart';
 import 'package:flutter/cupertino.dart';
+import '../../../core/provider/provider.dart';
 import '../../../theme/theme.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -7,6 +8,7 @@ class ProfileScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final provider=Provider.of<ActivityTrackerProcider>(context);
     return Scaffold(
       body: SafeArea(
         child: Column(
@@ -20,7 +22,6 @@ class ProfileScreen extends StatelessWidget {
                 physics: const BouncingScrollPhysics(),
                 child: Column(
                   children: [
-
                     ListTile(
                       leading: CircleAvatar(
                         maxRadius: 30,
@@ -45,7 +46,40 @@ class ProfileScreen extends StatelessWidget {
                           ]),
                         ),
                         child: ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            showModalBottomSheet(
+                              context: context,
+                              builder: (context) {
+                                return Container(
+                                  height: 300.h,
+                                  decoration: const BoxDecoration(
+                                    // color: AppColor.lightBlueBG,
+                                  ),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0).w,
+                                    child: Column(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: [
+                                        CircleAvatar(
+                                          radius: 50,
+                                          child: Image.asset(
+                                              'assets/images/exc2.png'),
+                                        ),
+                                        const CustomTextFormField(
+                                            icon: Icons.person_outline,
+                                            hintText: 'Enter Name...'),
+                                        const CustomTextFormField(
+                                            icon: Icons.subtitles,
+                                            hintText: 'Enter Subtitle..'),
+                                        CustomSubmitButton(
+                                            onPressed: () {}, title: 'Update'),
+                                      ],
+                                    ),
+                                  ),
+                                );
+                              },
+                            );
+                          },
                           style: ElevatedButton.styleFrom(
                             primary: Colors.transparent,
                             onSurface: Colors.transparent,
@@ -163,19 +197,20 @@ class ProfileScreen extends StatelessWidget {
                           const Padding(
                             padding: EdgeInsets.only(left: 20.0),
                             child: Text(
-                              'Notification',
+                              'Dark Mode',
                               style: TextStyles.h2Bold,
                             ),
                           ),
                           ProfileListTile(
-                            title: 'Pop-up Notification',
+                            title: 'Switch Theme',
                             icon: Icons.person_outline,
                             trailingWidget: SwitcherButton(
                               offColor: AppColor.blueLinear1,
                               onColor: AppColor.purpleLinear2,
-                              value: true,
+                              value: false,
                               onChange: (value) {
-                                Vibration.vibrate(duration:2000);
+                                provider.onSwitchTheme(value);
+                                Vibration.vibrate(duration: 2000);
                               },
                             ),
                           ),
