@@ -140,7 +140,7 @@ class ProfileScreen extends StatelessWidget {
                             Column(
                               children: [
                                 Text(
-                                  '22ye',
+                                  '22yo',
                                   style: TextStyles.h1Normal
                                       .copyWith(color: AppColor.blueLinear2),
                                 ),
