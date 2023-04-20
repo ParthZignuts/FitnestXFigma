@@ -15,6 +15,6 @@ export './progressphoto/progress_photo_screen.dart';
 export './search/search_screen.dart';
 export './notification/notification_screen.dart';
 export './activitytracker/activity_tracker_screen.dart';
-export './home/home_screen2.dart';
+export './home/home_screen_pageview.dart';
 export './compare/compare_screen.dart';
 export 'signup/signup_screen.dart';

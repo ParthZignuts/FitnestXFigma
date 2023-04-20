@@ -31,9 +31,9 @@ class FitnestX extends StatelessWidget {
             builder: (context, value, child) {
               return GetMaterialApp(
                 theme: value.switchTheme
-                    ? FlexColorScheme.dark(scheme: FlexScheme.purpleBrown)
+                    ? FlexColorScheme.dark(scheme: FlexScheme.purpleM3)
                         .toTheme
-                    : FlexColorScheme.light(scheme: FlexScheme.purpleBrown)
+                    : FlexColorScheme.light(scheme: FlexScheme.purpleM3)
                         .toTheme,
                 home: const SplashScreen(),
                 // home: const MainScreen(),

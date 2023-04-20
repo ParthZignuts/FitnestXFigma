@@ -1,10 +1,7 @@
-import 'package:another_stepper/widgets/another_stepper.dart';
 import 'package:fitnestx/core/provider/provider.dart';
 import 'package:fitnestx/utils/const/const_list.dart';
 import '../../../theme/theme.dart';
 import '../../app.dart';
-import '../../widget/heartbeatchart.dart';
-
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
@@ -16,7 +13,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.only(left: 10.0, right: 10.0).r,
+          padding: const EdgeInsets.only(left: 10.0, right: 10.0, top: 10.0).r,
           child: Column(
             children: [
               Row(
@@ -152,7 +149,8 @@ class HomeScreen extends StatelessWidget {
                         ),
                         Padding(
                           padding: const EdgeInsets.only(
-                                  left: 10.0, top: 30.0, right: 19.0).r,
+                                  left: 10.0, top: 30.0, right: 19.0)
+                              .r,
                           child: SizedBox(
                             height: 531.h,
                             width: 500.w,
@@ -232,8 +230,12 @@ class HomeScreen extends StatelessWidget {
                                       SleepAndCaloriesGraph(
                                         title: 'Sleep',
                                         subTitle: '8h 20m',
-                                        widget: Image.asset(
-                                            'assets/images/Sleep-Graph.png'),
+                                        widget: SizedBox(
+                                          height: 50.h,
+                                          width: 90.w,
+                                          child: Image.asset(
+                                              'assets/images/Sleep-Graph.png'),
+                                        ),
                                       ),
                                       Padding(
                                         padding: const EdgeInsets.only(
@@ -263,8 +265,8 @@ class HomeScreen extends StatelessWidget {
                               itemCount: value.isShowMore ? 4 : 1,
                               itemBuilder: (context, index) {
                                 return ListTile(
-                                  leading: Image.asset(
-                                      'assets/images/Workout$index.png'),
+                                  leading: SvgPicture.asset(
+                                      'assets/images/Workout-Pic$index.svg'),
                                   trailing: IconButton(
                                     onPressed: () {},
                                     icon: const Icon(

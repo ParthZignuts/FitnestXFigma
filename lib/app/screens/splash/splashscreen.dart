@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
 import '../../../theme/theme.dart';
@@ -17,7 +18,7 @@ class SplashScreen extends StatelessWidget {
          gradient: LinearGradient(colors: [AppColor.blueLinear1,AppColor.blueLinear2]),
         ),
         child: Center(
-          child: Image.asset('assets/images/logo.png'),
+          child: SvgPicture.asset('assets/images/FitnestXSplash.svg'),
         ),
       ),
     );

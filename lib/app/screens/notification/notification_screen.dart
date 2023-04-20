@@ -12,7 +12,7 @@ class NotificationScreen extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.only(left: 8.0, right: 8.0).r,
+          padding: const EdgeInsets.only(left: 8.0, right: 8.0,top: 5.0).r,
           child: Column(
             children: [
               CustomAppbar(
@@ -35,12 +35,12 @@ class NotificationScreen extends StatelessWidget {
                               builder: (BuildContext context) {
                                 return Center(
                                   child:
-                                      Image.asset('assets/images/Ellipse$index.png'),
+                                      SvgPicture.asset('assets/images/Ellipse$index.svg'),
                                 );
                               },
                             );
                           },
-                          child: Image.asset('assets/images/Ellipse$index.png'),
+                          child:  SvgPicture.asset('assets/images/Ellipse$index.svg'),
                         ),
                         trailing: IconButton(
                           onPressed: () {},

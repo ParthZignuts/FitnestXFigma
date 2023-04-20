@@ -20,3 +20,6 @@ export './traininglist_of_workout_tracker.dart';
 export 'package:vibration/vibration.dart';
 export 'package:switcher_button/switcher_button.dart';
 export './custom_textform_feild.dart';
+export './heartbeatchart.dart';
+export 'package:another_stepper/widgets/another_stepper.dart';
+export 'package:flutter_svg/svg.dart';

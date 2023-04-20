@@ -9,55 +9,58 @@ class CompareScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Column(
-          children: [
-            CustomAppbar(
-                leadingIcon: const Icon(CupertinoIcons.left_chevron),
-                appbarTitle: 'Comparison',
-                onPressed: () => Navigator.pop(context)),
-            Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: Column(
-                children: [
-                  ListTile(
-                    title: Text(
-                      'Select Month 1 ',
-                      style: TextStyles.h3Normal.copyWith(color: AppColor.gray),
+        child: Padding(
+          padding: const EdgeInsets.only(top: 5.0),
+          child: Column(
+            children: [
+              CustomAppbar(
+                  leadingIcon: const Icon(CupertinoIcons.left_chevron),
+                  appbarTitle: 'Comparison',
+                  onPressed: () => Navigator.pop(context)),
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Column(
+                  children: [
+                    ListTile(
+                      title: Text(
+                        'Select Month 1 ',
+                        style: TextStyles.h3Normal.copyWith(color: AppColor.gray),
+                      ),
+                      leading: const Icon(
+                        Icons.calendar_month_outlined,
+                        color: AppColor.blueLinear1,
+                      ),
+                      trailing: IconButton(
+                          onPressed: () {},
+                          icon: const Icon(
+                            CupertinoIcons.right_chevron,
+                            color: AppColor.blueLinear1,
+                          )),
                     ),
-                    leading: const Icon(
-                      Icons.calendar_month_outlined,
-                      color: AppColor.blueLinear1,
-                    ),
-                    trailing: IconButton(
+                    ListTile(
+                      title: Text(
+                        'Select Month 2 ',
+                        style: TextStyles.h3Normal.copyWith(color: AppColor.gray),
+                      ),
+                      leading: const Icon(
+                        Icons.calendar_month_outlined,
+                        color: AppColor.blueLinear1,
+                      ),
+                      trailing: IconButton(
                         onPressed: () {},
                         icon: const Icon(
                           CupertinoIcons.right_chevron,
                           color: AppColor.blueLinear1,
-                        )),
-                  ),
-                  ListTile(
-                    title: Text(
-                      'Select Month 2 ',
-                      style: TextStyles.h3Normal.copyWith(color: AppColor.gray),
-                    ),
-                    leading: const Icon(
-                      Icons.calendar_month_outlined,
-                      color: AppColor.blueLinear1,
-                    ),
-                    trailing: IconButton(
-                      onPressed: () {},
-                      icon: const Icon(
-                        CupertinoIcons.right_chevron,
-                        color: AppColor.blueLinear1,
+                        ),
                       ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
-            ),
-            const Spacer(),
-            CustomSubmitButton(onPressed: () {}, title: 'Compare')
-          ],
+              const Spacer(),
+              CustomSubmitButton(onPressed: () {}, title: 'Compare')
+            ],
+          ),
         ),
       ),
     );

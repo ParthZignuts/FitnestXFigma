@@ -16,20 +16,17 @@ class CustomAppbar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(right: 18.0).r,
-      child: Row(
-        children: [
-          IconButton(onPressed: onPressed, icon: leadingIcon),
-          const Spacer(),
-          Text(
-            appbarTitle,
-            style: TextStyles.h2Bold,
-          ),
-          const Spacer(),
-          Image.asset('assets/images/Detail-Navs.png'),
-        ],
-      ),
+    return Row(
+      children: [
+        IconButton(onPressed: onPressed, icon: leadingIcon),
+        const Spacer(),
+        Text(
+          appbarTitle,
+          style: TextStyles.h2Bold,
+        ),
+        const Spacer(),
+        IconButton(onPressed: (){}, icon: const Icon(Icons.info_outline))
+      ],
     );
   }
 }

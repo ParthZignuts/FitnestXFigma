@@ -17,7 +17,7 @@ class SearchProgressList extends StatelessWidget {
       itemBuilder: (context, index) {
         return ListTile(
           leading:
-          Image.asset('assets/images/Latest-Pic$index.png'),
+          SvgPicture.asset('assets/images/Latest-Pic$index.svg'),
           trailing: IconButton(
             onPressed: () {},
             icon: const Icon(Icons.keyboard_arrow_right_outlined,

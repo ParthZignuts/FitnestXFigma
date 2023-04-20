@@ -12,7 +12,7 @@ class SignUpScreen extends StatelessWidget {
       body: SafeArea(
         child: Center(
           child: Padding(
-            padding: const EdgeInsets.only(left: 15.0, right: 15.0).r,
+            padding: const EdgeInsets.only(left: 15.0, right: 15.0, top: 10.0).r,
             child: Column(
               children: [
                 Column(
@@ -35,6 +35,8 @@ class SignUpScreen extends StatelessWidget {
                       Icons.person_outline,
                       color: AppColor.blueLinear1,
                     ),
+                    maxLength: 30,
+                    textInputType: TextInputType.text,
                     obscureText: false,
                     visibilityIcon: false),
                 const InputFormField(
@@ -43,6 +45,8 @@ class SignUpScreen extends StatelessWidget {
                     Icons.person_outline,
                     color: AppColor.blueLinear1,
                   ),
+                  maxLength: 30,
+                  textInputType: TextInputType.text,
                   obscureText: false,
                   visibilityIcon: false,
                 ),
@@ -54,6 +58,8 @@ class SignUpScreen extends StatelessWidget {
                   ),
                   obscureText: false,
                   visibilityIcon: false,
+                  maxLength: 30,
+                  textInputType: TextInputType.emailAddress,
                 ),
                 const InputFormField(
                   hintText: 'Password',
@@ -63,6 +69,8 @@ class SignUpScreen extends StatelessWidget {
                   ),
                   obscureText: true,
                   visibilityIcon: true,
+                  maxLength: 30,
+                  textInputType: TextInputType.text,
                 ),
                 Row(
                   children: [
@@ -78,7 +86,9 @@ class SignUpScreen extends StatelessWidget {
                       },
                     ),
                     const Text(
-                        'By Continuing you accept our Privacy Policy and\nTerm of Use',style: TextStyles.p3Normal,)
+                      'By Continuing you accept our Privacy Policy and\nTerm of Use',
+                      style: TextStyles.p3Normal,
+                    )
                   ],
                 ),
                 const Spacer(),
@@ -96,11 +106,11 @@ class SignUpScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     CustomIconBtn(
-                        imgUrl: 'assets/images/google.png', onPressed: () {}),
+                        imgUrl: 'assets/images/glogo.svg', onPressed: () {}),
                     Padding(
                       padding: const EdgeInsets.only(left: 20.0).r,
                       child: CustomIconBtn(
-                          imgUrl: 'assets/images/facebook.png',
+                          imgUrl: 'assets/images/flogo.svg',
                           onPressed: () {}),
                     ),
                   ],

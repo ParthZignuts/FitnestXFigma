@@ -49,8 +49,7 @@ class GalleryListView extends StatelessWidget {
                                 },
                               );
                             },
-                            child: Image.asset(
-                                'assets/images/exc$index.png'),
+                            child: Image.asset( 'assets/images/exc$index.png'),
                           ),
                         ),
                       );

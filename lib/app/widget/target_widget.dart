@@ -30,7 +30,7 @@ class TargetWidget extends StatelessWidget {
           padding: const EdgeInsets.all(15.0).r,
           child: Row(
             children: [
-              Image.asset(imgSrc),
+              SvgPicture.asset(imgSrc),
               Padding(
                 padding:  const EdgeInsets.only(left: 4.0).r,
                 child: Column(

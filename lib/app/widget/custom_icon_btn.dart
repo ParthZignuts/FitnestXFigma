@@ -1,4 +1,7 @@
 
+import 'package:flutter_svg/flutter_svg.dart';
+
+import '../../theme/theme.dart';
 import '../app.dart';
 
 class CustomIconBtn extends StatelessWidget {
@@ -19,10 +22,10 @@ class CustomIconBtn extends StatelessWidget {
         height: 40.h,
         width: 50.w,
         decoration: BoxDecoration(
-          border: Border.all(),
+          border: Border.all(color: AppColor.blueLinear1),
           borderRadius: BorderRadius.circular(12.0).r,
         ),
-        child: Image.asset(imgUrl),
+        child: SvgPicture.asset(imgUrl),
       ),
     );
   }

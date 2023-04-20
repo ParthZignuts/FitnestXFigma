@@ -20,7 +20,6 @@ class MyApp extends StatelessWidget {
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-
       title: 'FitnestX',
       home: Builder(
         builder: (BuildContext context) {

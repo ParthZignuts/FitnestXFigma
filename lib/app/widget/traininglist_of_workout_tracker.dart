@@ -32,7 +32,7 @@ class TrainingListOfWorkoutTracker extends StatelessWidget {
                       children: [
                         Text(
                           ConstList.workOutlist[index],
-                          style: TextStyles.h3Bold,
+                          style: TextStyles.h3Bold.copyWith(color: AppColor.black),
                         ),
                         Padding(
                           padding: const EdgeInsets.only(top: 5.0).r,
@@ -74,8 +74,8 @@ class TrainingListOfWorkoutTracker extends StatelessWidget {
                     children: [
                       SizedBox(
                         width: 70.w,
-                        child: Image.asset(
-                            'assets/images/WorkOutTrackerVector$index.png'),
+                        child: SvgPicture.asset(
+                            'assets/images/WorkOutTrackerVector$index.svg'),
                       )
                     ],
                   ),

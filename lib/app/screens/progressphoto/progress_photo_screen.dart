@@ -11,7 +11,7 @@ class ProgressPhotoScreen extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.only(left: 10.0, right: 10.0).r,
+          padding: const EdgeInsets.only(left: 10.0, right: 10.0,top: 5.0).r,
           child: Column(
             children: [
               CustomAppbar(
@@ -40,7 +40,7 @@ class ProgressPhotoScreen extends StatelessWidget {
                                   maxRadius: 40.0.w,
                                   backgroundColor: AppColor.white,
                                   child:
-                                      Image.asset('assets/images/calender.png'),
+                                      Image.asset('assets/images/calendar.png'),
                                 ),
                                 Padding(
                                   padding: const EdgeInsets.only(left: 10.0).r,
@@ -135,7 +135,7 @@ class ProgressPhotoScreen extends StatelessWidget {
                                     ],
                                   ),
                                 ),
-                                Image.asset('assets/images/photoCalender.png'),
+                                SvgPicture.asset('assets/images/photocalendar.svg'),
                               ],
                             ),
                           ),

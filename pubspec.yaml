@@ -49,6 +49,7 @@ dependencies:
   switcher_button: ^0.0.4
   vibration: ^1.7.6
   flex_color_scheme: ^7.0.2
+  flutter_svg: ^2.0.5
 
 dev_dependencies:
   flutter_test:

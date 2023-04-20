@@ -55,7 +55,7 @@ class _HeartbeatChartState extends State<HeartbeatChart> {
         height: 150.h,
         child: SfCartesianChart(
           backgroundColor: AppColor.lightBlueBG,
-          title:ChartTitle(text: 'Heart Rate\n78 BPM',textStyle: TextStyles.p2Normal,alignment: ChartAlignment.near),
+          title:ChartTitle(text: 'Heart Rate\n78 BPM',textStyle: TextStyles.p2Normal.copyWith(color: AppColor.black),alignment: ChartAlignment.near),
             primaryXAxis: NumericAxis(
 
             edgeLabelPlacement: EdgeLabelPlacement.none, // Remove X-axis labels

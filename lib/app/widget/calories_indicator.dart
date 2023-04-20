@@ -11,7 +11,7 @@ class CaloriesIndicator extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       height: 100.h,
-      width: 100.h,
+      width: 100.w,
       child: SleekCircularSlider(
 
         innerWidget: (percentage) => centerDetails,

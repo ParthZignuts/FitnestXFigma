@@ -13,7 +13,7 @@ class ActivityTrackerScreen extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.only(left: 10.0, right: 10.0).r,
+          padding: const EdgeInsets.only(left: 10.0, right: 10.0, top: 5).r,
           child: Column(
             children: [
               CustomAppbar(
@@ -52,8 +52,6 @@ class ActivityTrackerScreen extends StatelessWidget {
                                               top: 8.0, bottom: 8.0)
                                           .r,
                                       child: Container(
-                                        width: 35.0.w,
-                                        height: 35.0.h,
                                         decoration: BoxDecoration(
                                           borderRadius:
                                               BorderRadius.circular(10.0).w,
@@ -77,18 +75,20 @@ class ActivityTrackerScreen extends StatelessWidget {
                               ),
                               Padding(
                                 padding: const EdgeInsets.only(
-                                        right: 10.0, left: 10.0).r,
+                                        right: 10.0, left: 10.0)
+                                    .r,
                                 child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceAround,
                                   children: const [
                                     TargetWidget(
                                         title: '8L',
                                         subTitle: 'Water Intake',
-                                        imgSrc: 'assets/images/glass 1.png'),
+                                        imgSrc: 'assets/images/glass 1.svg'),
                                     TargetWidget(
                                         title: '2400',
                                         subTitle: 'Foot Steps',
-                                        imgSrc: 'assets/images/boots 1.png'),
+                                        imgSrc: 'assets/images/boots 1.svg'),
                                   ],
                                 ),
                               ),
@@ -110,7 +110,7 @@ class ActivityTrackerScreen extends StatelessWidget {
                           ],
                         ),
                       ),
-                      Image.asset('assets/images/Graph.png'),
+                      SvgPicture.asset('assets/images/ActivityGraph.svg'),
                       TitleWithViewMore(
                           provider: provider, title: 'Latest Activity'),
                       Consumer<ActivityTrackerProcider>(
@@ -121,8 +121,8 @@ class ActivityTrackerScreen extends StatelessWidget {
                             itemCount: value.isShowMore ? 6 : 2,
                             itemBuilder: (context, index) {
                               return ListTile(
-                                leading: Image.asset(
-                                    'assets/images/Latest-Pic$index.png'),
+                                leading: SvgPicture.asset(
+                                    'assets/images/Latest-Pic$index.svg'),
                                 trailing: IconButton(
                                   onPressed: () {},
                                   icon: const Icon(

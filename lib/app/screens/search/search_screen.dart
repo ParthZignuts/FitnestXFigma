@@ -29,8 +29,8 @@ class SearchScreen extends StatelessWidget {
                   indicatorSize: TabBarIndicatorSize.label,
                   indicatorColor: AppColor.blueLinear1,
                   labelStyle: TextStyles.h2Normal,
-                  labelColor: AppColor.blueLinear1,
-                  unselectedLabelColor:  AppColor.blueLinear1,
+                  labelColor: AppColor.purpleLinear2,
+                  unselectedLabelColor:  AppColor.purpleLinear2,
                   tabs: [
                     Tab(
                       text: 'Workout',

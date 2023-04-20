@@ -12,7 +12,7 @@ class LoginScreen extends StatelessWidget {
       body: SafeArea(
         child: Center(
           child: Padding(
-            padding: const EdgeInsets.only(left: 15.0, right: 15.0).r,
+            padding: const EdgeInsets.only(left: 15.0, right: 15.0, top: 5.0).r,
             child: Column(
               children: [
                 Column(
@@ -35,6 +35,8 @@ class LoginScreen extends StatelessWidget {
                     Icons.email_outlined,
                     color: AppColor.blueLinear1,
                   ),
+                  maxLength: 30,
+                  textInputType: TextInputType.emailAddress,
                   obscureText: false,
                   visibilityIcon: false,
                 ),
@@ -46,9 +48,11 @@ class LoginScreen extends StatelessWidget {
                   ),
                   obscureText: true,
                   visibilityIcon: true,
+                  textInputType: TextInputType.text,
+                  maxLength: 20,
                 ),
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () => Vibration.vibrate(duration: 1000),
                   child: Text(
                     'Forgot your pssword?',
                     style: TextStyles.p2Bold.copyWith(
@@ -59,7 +63,8 @@ class LoginScreen extends StatelessWidget {
                 ),
                 const Spacer(),
                 CustomSubmitButton(
-                  onPressed: () => Get.offAll(const RegistattionSuccessScreen()),
+                  onPressed: () =>
+                      Get.offAll(const RegistattionSuccessScreen()),
                   title: 'Login',
                 ),
                 TextDivider.horizontal(
@@ -73,12 +78,13 @@ class LoginScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       CustomIconBtn(
-                          imgUrl: 'assets/images/google.png', onPressed: () {}),
+                          imgUrl: 'assets/images/glogo.svg',
+                          onPressed: () => Vibration.vibrate(duration: 1000)),
                       Padding(
                         padding: const EdgeInsets.only(left: 20.0).r,
                         child: CustomIconBtn(
-                            imgUrl: 'assets/images/facebook.png',
-                            onPressed: () {}),
+                            imgUrl: 'assets/images/flogo.svg',
+                            onPressed: () => Vibration.vibrate(duration: 1000)),
                       ),
                     ],
                   ),

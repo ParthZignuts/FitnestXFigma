@@ -15,7 +15,7 @@ class MainScreen extends StatelessWidget {
       builder: (context, value, child) {
         return PersistentTabView(
           context,
-          floatingActionButton: const Icon(Icons.chat),
+          floatingActionButton: const Text(''),
           screens: ConstList.buildScreen,
           items: ConstList.bottomNavbarItems,
           backgroundColor: value.switchTheme?AppColor.black: AppColor.white,

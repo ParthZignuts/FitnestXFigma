@@ -1,3 +1,5 @@
+import 'package:flutter/cupertino.dart';
+
 import '../app.dart';
 import '../../core/provider/provider.dart';
 
@@ -5,9 +7,13 @@ class OnboardNextScreenBtn extends StatelessWidget {
   const OnboardNextScreenBtn({
     super.key,
     required this.provider,
+    required this.icon,
+    required this.onPressed,
   });
 
   final OnboardingScreenProvider provider;
+  final IconData icon;
+  final bool onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -16,21 +22,32 @@ class OnboardNextScreenBtn extends StatelessWidget {
       return Align(
         alignment: Alignment.bottomRight,
         child: Padding(
-          padding: const EdgeInsets.only(bottom: 40.0, right: 35.0).r,
+          padding: const EdgeInsets.only(
+            bottom: 40.0,
+          ).r,
           child: GestureDetector(
             onTap: () {
-              if (provider.pageIndex < 3) {
-                provider.pageIndex++;
-                provider.onTabChanged();
+              if (onPressed) {
+                if (provider.pageIndex > 0) {
+                  provider.pageIndex--;
+                  provider.onTabChanged();
+                }
+                }
+              else  {
+                if (provider.pageIndex < 3) {
+                  provider.pageIndex++;
+                  provider.onTabChanged();
+                }
+                else {
+                  if (provider.pageIndex == 3) {
+                    Get.to(const SignUpScreen());
+                  }
               }
-              else
-              {
-                Get.to(const SignUpScreen());
               }
             },
             child: CircleAvatar(
               radius: 25.0.r,
-              child: Image.asset('assets/images/rightArrow.png'),
+              child: Icon(icon),
             ),
           ),
         ),
@@ -38,4 +55,3 @@ class OnboardNextScreenBtn extends StatelessWidget {
     });
   }
 }
-
