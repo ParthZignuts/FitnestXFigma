@@ -12,7 +12,8 @@ class SignUpScreen extends StatelessWidget {
       body: SafeArea(
         child: Center(
           child: Padding(
-            padding: const EdgeInsets.only(left: 15.0, right: 15.0, top: 10.0).r,
+            padding:
+                const EdgeInsets.only(left: 15.0, right: 15.0, top: 10.0).r,
             child: Column(
               children: [
                 Column(
@@ -110,8 +111,7 @@ class SignUpScreen extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.only(left: 20.0).r,
                       child: CustomIconBtn(
-                          imgUrl: 'assets/images/flogo.svg',
-                          onPressed: () {}),
+                          imgUrl: 'assets/images/flogo.svg', onPressed: () {}),
                     ),
                   ],
                 ),

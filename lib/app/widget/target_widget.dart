@@ -1,4 +1,3 @@
-
 import '../../theme/theme.dart';
 import '../app.dart';
 
@@ -17,8 +16,7 @@ class TargetWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding:
-      EdgeInsets.only(bottom: 10.0.sp).r,
+      padding: EdgeInsets.only(bottom: 10.0.sp).r,
       child: Container(
         height: 65.h,
         width: 150.w,
@@ -32,20 +30,18 @@ class TargetWidget extends StatelessWidget {
             children: [
               SvgPicture.asset(imgSrc),
               Padding(
-                padding:  const EdgeInsets.only(left: 4.0).r,
+                padding: const EdgeInsets.only(left: 4.0).r,
                 child: Column(
-                  crossAxisAlignment:
-                  CrossAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
                       title,
-                      style: TextStyles.h2Bold.copyWith(
-                          color: AppColor.blueLinear2),
+                      style: TextStyles.h2Bold
+                          .copyWith(color: AppColor.blueLinear2),
                     ),
                     Text(
                       subTitle,
-                      style: TextStyles.h3Normal
-                          .copyWith(color: AppColor.gray),
+                      style: TextStyles.h3Normal.copyWith(color: AppColor.gray),
                     ),
                   ],
                 ),

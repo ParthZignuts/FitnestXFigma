@@ -2,6 +2,7 @@ import 'package:fitnestx/core/provider/provider.dart';
 import 'package:fitnestx/utils/const/const_list.dart';
 import '../../../theme/theme.dart';
 import '../../app.dart';
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
 

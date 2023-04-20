@@ -1,6 +1,3 @@
-
-import 'package:flutter_svg/flutter_svg.dart';
-
 import '../../theme/app_color.dart';
 import '../app.dart';
 
@@ -26,8 +23,7 @@ class HeightWeightInputField extends StatelessWidget {
         fillColor: AppColor.white,
         counterText: '',
         border: InputBorder.none,
-
-        prefixIcon:  Icon(
+        prefixIcon: Icon(
           icon,
           color: AppColor.blueLinear1,
         ),

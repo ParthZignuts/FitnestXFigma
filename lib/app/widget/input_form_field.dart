@@ -1,6 +1,5 @@
 import 'package:fitnestx/core/provider/provider.dart';
 import 'package:fitnestx/theme/app_color.dart';
-import 'package:flutter/services.dart';
 import '../screens/screens.dart';
 
 class InputFormField extends StatelessWidget {
@@ -36,7 +35,6 @@ class InputFormField extends StatelessWidget {
           fillColor: AppColor.white,
           hintText: hintText,
           prefixIcon: icon,
-
           suffixIcon: Consumer<SignupScreenProvider>(
             builder: (context, value, child) {
               return Visibility(

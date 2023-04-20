@@ -17,15 +17,22 @@ class RegistattionSuccessScreen extends StatelessWidget {
                 const Spacer(),
                 Image.asset('assets/images/welcomeonsuccess.png'),
                 Padding(
-                  padding:  const EdgeInsets.only(top: 25.0,bottom: 10.0).r,
-                  child: const Text('Welcome Stefani',style: TextStyles.h1UltraBold,textAlign: TextAlign.center,),
+                  padding: const EdgeInsets.only(top: 25.0, bottom: 10.0).r,
+                  child: const Text(
+                    'Welcome Stefani',
+                    style: TextStyles.h1UltraBold,
+                    textAlign: TextAlign.center,
+                  ),
                 ),
                 Text(
                   'You are all set now,let\'s reach your\ngoals together with us ',
-                  style: TextStyles.h3Normal.copyWith(color: AppColor.gray),textAlign: TextAlign.center,
+                  style: TextStyles.h3Normal.copyWith(color: AppColor.gray),
+                  textAlign: TextAlign.center,
                 ),
                 const Spacer(),
-                CustomSubmitButton(onPressed: ()=> Get.offAll(const MainScreen()), title: 'Go To Home'),
+                CustomSubmitButton(
+                    onPressed: () => Get.offAll(const MainScreen()),
+                    title: 'Go To Home'),
               ],
             ),
           ),

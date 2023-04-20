@@ -18,7 +18,7 @@ class MainScreen extends StatelessWidget {
           floatingActionButton: const Text(''),
           screens: ConstList.buildScreen,
           items: ConstList.bottomNavbarItems,
-          backgroundColor: value.switchTheme?AppColor.black: AppColor.white,
+          backgroundColor: value.switchTheme ? AppColor.black : AppColor.white,
           navBarStyle: NavBarStyle.style15,
         );
       },

@@ -1,5 +1,3 @@
-import 'package:flutter/cupertino.dart';
-
 import '../app.dart';
 import '../../core/provider/provider.dart';
 
@@ -32,17 +30,15 @@ class OnboardNextScreenBtn extends StatelessWidget {
                   provider.pageIndex--;
                   provider.onTabChanged();
                 }
-                }
-              else  {
+              } else {
                 if (provider.pageIndex < 3) {
                   provider.pageIndex++;
                   provider.onTabChanged();
-                }
-                else {
+                } else {
                   if (provider.pageIndex == 3) {
                     Get.to(const SignUpScreen());
                   }
-              }
+                }
               }
             },
             child: CircleAvatar(

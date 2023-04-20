@@ -1,5 +1,3 @@
-
-import 'package:sleek_circular_slider/sleek_circular_slider.dart';
 import '../../theme/theme.dart';
 import '../../utils/const/const_list.dart';
 import '../app.dart';
@@ -13,13 +11,12 @@ class CaloriesIndicator extends StatelessWidget {
       height: 100.h,
       width: 100.w,
       child: SleekCircularSlider(
-
         innerWidget: (percentage) => centerDetails,
         appearance: CircularSliderAppearance(
           size: 170.r,
           angleRange: 360,
           customWidths:
-          CustomSliderWidths(handlerSize: 0, progressBarWidth: 10.0),
+              CustomSliderWidths(handlerSize: 0, progressBarWidth: 10.0),
           customColors: CustomSliderColors(
             hideShadow: true,
             trackColors: ConstList.listOfColor,
@@ -38,7 +35,7 @@ class CaloriesIndicator extends StatelessWidget {
 
 Widget centerDetails = const Center(
     child: Text(
-      '230kCal\nleft',
-      style: TextStyles.p1Bold,
-      textAlign: TextAlign.center,
-    ));
+  '230kCal\nleft',
+  style: TextStyles.p1Bold,
+  textAlign: TextAlign.center,
+));

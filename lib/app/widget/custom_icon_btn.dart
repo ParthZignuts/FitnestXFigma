@@ -1,6 +1,3 @@
-
-import 'package:flutter_svg/flutter_svg.dart';
-
 import '../../theme/theme.dart';
 import '../app.dart';
 

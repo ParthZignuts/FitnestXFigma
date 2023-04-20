@@ -1,4 +1,3 @@
-
 import '../../theme/theme.dart';
 import '../app.dart';
 
@@ -7,7 +6,9 @@ class GalleryListView extends StatelessWidget {
     required this.date,
     super.key,
   });
+
   final String date;
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -15,9 +16,7 @@ class GalleryListView extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(date,
-              style: TextStyles.p1Bold
-                  .copyWith(color: AppColor.gray)),
+          Text(date, style: TextStyles.p1Bold.copyWith(color: AppColor.gray)),
           Row(
             children: [
               Expanded(
@@ -30,26 +29,25 @@ class GalleryListView extends StatelessWidget {
                     physics: const BouncingScrollPhysics(),
                     scrollDirection: Axis.horizontal,
                     itemCount: 6,
-                    itemBuilder:
-                        (BuildContext context, int index) {
+                    itemBuilder: (BuildContext context, int index) {
                       return SizedBox(
                         width: 110.w,
                         // adjust width as needed
                         child: Padding(
                           padding: const EdgeInsets.all(10.0).r,
                           child: GestureDetector(
-                            onTap: (){
+                            onTap: () {
                               showDialog(
                                 context: context,
                                 builder: (BuildContext context) {
                                   return Center(
-                                    child:
-                                    Image.asset( 'assets/images/exc$index.png'),
+                                    child: Image.asset(
+                                        'assets/images/exc$index.png'),
                                   );
                                 },
                               );
                             },
-                            child: Image.asset( 'assets/images/exc$index.png'),
+                            child: Image.asset('assets/images/exc$index.png'),
                           ),
                         ),
                       );

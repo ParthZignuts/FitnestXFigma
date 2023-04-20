@@ -10,9 +10,7 @@ class ActivityTrackerProcider extends ChangeNotifier{
   }
 
   onSwitchTheme(bool value){
-    print('theme change call');
     switchTheme=value;
-    print(switchTheme);
     notifyListeners();
   }
 

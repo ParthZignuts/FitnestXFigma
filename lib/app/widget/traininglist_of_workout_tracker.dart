@@ -32,7 +32,8 @@ class TrainingListOfWorkoutTracker extends StatelessWidget {
                       children: [
                         Text(
                           ConstList.workOutlist[index],
-                          style: TextStyles.h3Bold.copyWith(color: AppColor.black),
+                          style:
+                              TextStyles.h3Bold.copyWith(color: AppColor.black),
                         ),
                         Padding(
                           padding: const EdgeInsets.only(top: 5.0).r,

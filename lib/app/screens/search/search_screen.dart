@@ -7,13 +7,14 @@ class SearchScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final provider=Provider.of<ActivityTrackerProcider>(context);
+    final provider = Provider.of<ActivityTrackerProcider>(context);
     return SafeArea(
       child: DefaultTabController(
         length: 2,
         child: Scaffold(
           appBar: AppBar(
-            backgroundColor: provider.switchTheme?AppColor.lightBlack : AppColor.white,
+            backgroundColor:
+                provider.switchTheme ? AppColor.lightBlack : AppColor.white,
             centerTitle: true,
             // backgroundColor: AppColor.white,
             title: Text(
@@ -30,7 +31,7 @@ class SearchScreen extends StatelessWidget {
                   indicatorColor: AppColor.blueLinear1,
                   labelStyle: TextStyles.h2Normal,
                   labelColor: AppColor.purpleLinear2,
-                  unselectedLabelColor:  AppColor.purpleLinear2,
+                  unselectedLabelColor: AppColor.purpleLinear2,
                   tabs: [
                     Tab(
                       text: 'Workout',

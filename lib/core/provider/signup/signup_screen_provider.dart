@@ -9,7 +9,7 @@ class SignupScreenProvider extends ChangeNotifier {
   PageController pageController = PageController();
 
   void datePicker(BuildContext context) async {
-    DateTime? _pickerDate = await
+    DateTime? pickerDate = await
     showDatePicker
       (
       context: context,
@@ -18,8 +18,8 @@ class SignupScreenProvider extends ChangeNotifier {
       lastDate: DateTime(2323),
     );
 
-    if (_pickerDate != null) {
-        selectedDate = _pickerDate;
+    if (pickerDate != null) {
+        selectedDate = pickerDate;
     }
     notifyListeners();
   }

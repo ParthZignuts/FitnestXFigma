@@ -60,9 +60,16 @@ class OnboardScreen extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-
-              OnboardNextScreenBtn(provider: provider,icon: CupertinoIcons.left_chevron,onPressed: true,),
-              OnboardNextScreenBtn(provider: provider,icon: CupertinoIcons.right_chevron,onPressed: false,),
+              OnboardNextScreenBtn(
+                provider: provider,
+                icon: CupertinoIcons.left_chevron,
+                onPressed: true,
+              ),
+              OnboardNextScreenBtn(
+                provider: provider,
+                icon: CupertinoIcons.right_chevron,
+                onPressed: false,
+              ),
             ],
           ),
         ],

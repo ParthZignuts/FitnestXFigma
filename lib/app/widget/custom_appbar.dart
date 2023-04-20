@@ -1,4 +1,3 @@
-
 import '../../theme/theme.dart';
 import '../app.dart';
 
@@ -25,7 +24,7 @@ class CustomAppbar extends StatelessWidget {
           style: TextStyles.h2Bold,
         ),
         const Spacer(),
-        IconButton(onPressed: (){}, icon: const Icon(Icons.info_outline))
+        IconButton(onPressed: () {}, icon: const Icon(Icons.info_outline))
       ],
     );
   }

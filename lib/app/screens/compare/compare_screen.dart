@@ -24,7 +24,8 @@ class CompareScreen extends StatelessWidget {
                     ListTile(
                       title: Text(
                         'Select Month 1 ',
-                        style: TextStyles.h3Normal.copyWith(color: AppColor.gray),
+                        style:
+                            TextStyles.h3Normal.copyWith(color: AppColor.gray),
                       ),
                       leading: const Icon(
                         Icons.calendar_month_outlined,
@@ -40,7 +41,8 @@ class CompareScreen extends StatelessWidget {
                     ListTile(
                       title: Text(
                         'Select Month 2 ',
-                        style: TextStyles.h3Normal.copyWith(color: AppColor.gray),
+                        style:
+                            TextStyles.h3Normal.copyWith(color: AppColor.gray),
                       ),
                       leading: const Icon(
                         Icons.calendar_month_outlined,

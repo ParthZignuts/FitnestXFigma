@@ -11,7 +11,7 @@ class ProgressPhotoScreen extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.only(left: 10.0, right: 10.0,top: 5.0).r,
+          padding: const EdgeInsets.only(left: 10.0, right: 10.0, top: 5.0).r,
           child: Column(
             children: [
               CustomAppbar(
@@ -135,7 +135,8 @@ class ProgressPhotoScreen extends StatelessWidget {
                                     ],
                                   ),
                                 ),
-                                SvgPicture.asset('assets/images/photocalendar.svg'),
+                                SvgPicture.asset(
+                                    'assets/images/photocalendar.svg'),
                               ],
                             ),
                           ),
@@ -155,14 +156,17 @@ class ProgressPhotoScreen extends StatelessWidget {
                               children: [
                                 Padding(
                                   padding: const EdgeInsets.only(left: 12.0).r,
-                                  child:  Text(
+                                  child: Text(
                                     'Compare My Photo',
-                                    style: TextStyles.p1Bold.copyWith(color: AppColor.black),
+                                    style: TextStyles.p1Bold
+                                        .copyWith(color: AppColor.black),
                                   ),
                                 ),
                                 const Spacer(),
                                 CheckViewMoreButton(
-                                    title: 'Compare', onPressed: () => Get.to(const CompareScreen()))
+                                    title: 'Compare',
+                                    onPressed: () =>
+                                        Get.to(const CompareScreen()))
                               ],
                             ),
                           ),
@@ -190,7 +194,6 @@ class ProgressPhotoScreen extends StatelessWidget {
                           ],
                         ),
                       ),
-
                       const GalleryListView(date: '2 June'),
                       const GalleryListView(date: '5 May'),
                     ],

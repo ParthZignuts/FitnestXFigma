@@ -1,4 +1,3 @@
-
 import '../../theme/theme.dart';
 import '../app.dart';
 
@@ -11,6 +10,7 @@ class CustomTextFormField extends StatelessWidget {
 
   final String hintText;
   final IconData icon;
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -29,12 +29,11 @@ class CustomTextFormField extends StatelessWidget {
                 borderSide: BorderSide(color: AppColor.blueLinear1),
               ),
               hintText: hintText,
-              contentPadding:
-              const EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
+              contentPadding: const EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(24.0),
               ),
-              prefixIcon:  Icon(
+              prefixIcon: Icon(
                 icon,
                 color: AppColor.blueLinear1,
               )),

@@ -13,7 +13,6 @@ class HeartbeatChart extends StatefulWidget {
 }
 
 class _HeartbeatChartState extends State<HeartbeatChart> {
-
   late Timer _timer;
   late List<ChartData> _chartData;
 
@@ -55,14 +54,15 @@ class _HeartbeatChartState extends State<HeartbeatChart> {
         height: 150.h,
         child: SfCartesianChart(
           backgroundColor: AppColor.lightBlueBG,
-          title:ChartTitle(text: 'Heart Rate\n78 BPM',textStyle: TextStyles.p2Normal.copyWith(color: AppColor.black),alignment: ChartAlignment.near),
-            primaryXAxis: NumericAxis(
-
+          title: ChartTitle(
+              text: 'Heart Rate\n78 BPM',
+              textStyle: TextStyles.p2Normal.copyWith(color: AppColor.black),
+              alignment: ChartAlignment.near),
+          primaryXAxis: NumericAxis(
             edgeLabelPlacement: EdgeLabelPlacement.none, // Remove X-axis labels
             isVisible: false,
           ),
           primaryYAxis: NumericAxis(
-
             edgeLabelPlacement: EdgeLabelPlacement.none, // Remove Y-axis labels
             isVisible: false,
           ),

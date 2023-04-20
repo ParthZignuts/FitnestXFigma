@@ -2,6 +2,7 @@ import 'package:fitnestx/core/provider/provider.dart';
 import '../../../theme/theme.dart';
 import '../../widget/widget.dart';
 import '../screens.dart';
+// ignore: depend_on_referenced_packages
 import 'package:intl/intl.dart';
 
 class SignUpScreen2 extends StatelessWidget {
@@ -57,7 +58,6 @@ class SignUpScreen2 extends StatelessWidget {
                                 value: value.newGenderValue,
                                 items: _genderOptions.map((gender) {
                                   return DropdownMenuItem(
-
                                     value: gender,
                                     child: Text(gender),
                                   );

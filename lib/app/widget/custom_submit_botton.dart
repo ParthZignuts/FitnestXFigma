@@ -1,13 +1,13 @@
 import 'package:fitnestx/app/app.dart';
-import '../../theme/app_color.dart';
-import '../../theme/text_styles.dart';
+import '../../theme/theme.dart';
 
 class CustomSubmitButton extends StatelessWidget {
-  const   CustomSubmitButton({
+  const CustomSubmitButton({
     required this.onPressed,
     required this.title,
     super.key,
   });
+
   final void Function() onPressed;
   final String title;
 
@@ -20,7 +20,7 @@ class CustomSubmitButton extends StatelessWidget {
         width: MediaQuery.of(context).size.width * 0.85,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(24.0),
-          gradient:  const LinearGradient(colors: [
+          gradient: const LinearGradient(colors: [
             AppColor.blueLinear1,
             AppColor.blueLinear2,
           ]),

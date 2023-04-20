@@ -1,4 +1,3 @@
-
 import '../../core/provider/provider.dart';
 import '../../theme/theme.dart';
 import '../app.dart';
@@ -12,7 +11,6 @@ class TitleWithViewMore extends StatelessWidget {
 
   final ActivityTrackerProcider provider;
   final String title;
-
 
   @override
   Widget build(BuildContext context) {
@@ -29,8 +27,7 @@ class TitleWithViewMore extends StatelessWidget {
           },
           child: Text(
             'See more',
-            style: TextStyles.h3Bold
-                .copyWith(color: AppColor.gray),
+            style: TextStyles.h3Bold.copyWith(color: AppColor.gray),
           ),
         ),
       ],

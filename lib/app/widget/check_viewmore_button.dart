@@ -1,4 +1,3 @@
-
 import '../../theme/theme.dart';
 import '../app.dart';
 
@@ -15,7 +14,7 @@ class CheckViewMoreButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height:32.h,
+      height: 32.h,
       width: 120.w,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(24.0),
@@ -33,8 +32,7 @@ class CheckViewMoreButton extends StatelessWidget {
         onPressed: onPressed,
         child: Text(
           title,
-          style: TextStyles.h3Bold
-              .copyWith(color: AppColor.white),
+          style: TextStyles.h3Bold.copyWith(color: AppColor.white),
         ),
       ),
     );
