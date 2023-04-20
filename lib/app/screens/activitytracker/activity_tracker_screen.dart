@@ -44,8 +44,8 @@ class ActivityTrackerScreen extends StatelessWidget {
                                         .r,
                                 child: Row(
                                   children: [
-                                    const Text('Today Target',
-                                        style: TextStyles.h2Bold),
+                                     Text('Today Target',
+                                        style: TextStyles.h2Bold.copyWith(color: AppColor.black)),
                                     const Spacer(),
                                     Padding(
                                       padding: const EdgeInsets.only(

@@ -136,7 +136,7 @@ class HomeScreen extends StatelessWidget {
                             btnTitle: 'Check',
                             leadingTitle: 'Today Target'),
                         Padding(
-                          padding: const EdgeInsets.only(top: 15.0).r,
+                          padding: const EdgeInsets.only(top: 15.0,bottom: 8.0).r,
                           child: const Text(
                             'Activity Status',
                             style: TextStyles.h2Bold,

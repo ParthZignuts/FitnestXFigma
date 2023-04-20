@@ -3,7 +3,7 @@ import '../../../app/app.dart';
 class SignupScreenProvider extends ChangeNotifier {
   bool rememberMe = false;
   bool isVisible = true;
-  String newGenderValue = 'Choose Gender';
+  String newGenderValue = 'Male';
   int pageIndex = 0;
   DateTime? selectedDate;
   PageController pageController = PageController();
@@ -30,11 +30,6 @@ class SignupScreenProvider extends ChangeNotifier {
 
   onRememberMeChanged(bool value) {
     rememberMe = value;
-    notifyListeners();
-  }
-
-  changeSelectedGender(String value) {
-    newGenderValue = value;
     notifyListeners();
   }
 

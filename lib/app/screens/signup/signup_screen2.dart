@@ -2,6 +2,7 @@ import 'package:fitnestx/core/provider/provider.dart';
 import '../../../theme/theme.dart';
 import '../../widget/widget.dart';
 import '../screens.dart';
+
 // ignore: depend_on_referenced_packages
 import 'package:intl/intl.dart';
 
@@ -9,7 +10,6 @@ class SignUpScreen2 extends StatelessWidget {
   const SignUpScreen2({Key? key}) : super(key: key);
 
   static final List<String> _genderOptions = [
-    'Choose Gender',
     'Male',
     'Female',
   ];
@@ -49,31 +49,26 @@ class SignUpScreen2 extends StatelessWidget {
                       ).r,
                       child: Column(
                         children: [
-                          Consumer<SignupScreenProvider>(
-                            builder: (context, value, child) {
-                              return DropdownButtonFormField(
-                                dropdownColor: AppColor.blueLinear1,
-                                borderRadius: BorderRadius.circular(24.0).r,
-                                hint: const Text('Choose Gender'),
-                                value: value.newGenderValue,
-                                items: _genderOptions.map((gender) {
-                                  return DropdownMenuItem(
-                                    value: gender,
-                                    child: Text(gender),
-                                  );
-                                }).toList(),
-                                onChanged: (newValue) {},
-                                decoration: const InputDecoration(
-                                  fillColor: AppColor.white,
-                                  filled: true,
-                                  prefixIcon: Icon(
-                                    Icons.person_outline,
-                                    color: AppColor.blueLinear1,
-                                  ),
-                                  border: InputBorder.none,
-                                ),
+                          DropdownButtonFormField(
+                            dropdownColor: AppColor.blueLinear1,
+                            borderRadius: BorderRadius.circular(24.0).r,
+                            hint: const Text('Select You Gender'),
+                            items: _genderOptions.map((gender) {
+                              return DropdownMenuItem(
+                                value: gender,
+                                child: Text(gender),
                               );
-                            },
+                            }).toList(),
+                            onChanged: (newValue) {},
+                            decoration: const InputDecoration(
+                              fillColor: AppColor.white,
+                              filled: true,
+                              prefixIcon: Icon(
+                                Icons.person_outline,
+                                color: AppColor.blueLinear1,
+                              ),
+                              border: InputBorder.none,
+                            ),
                           ),
                           Padding(
                             padding:
