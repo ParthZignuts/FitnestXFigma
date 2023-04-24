@@ -28,13 +28,9 @@ class WorkoutTrackerScreen extends StatelessWidget {
                   builder: (context, value, child) {
                     return Container(
                       decoration: BoxDecoration(
-                          color: value.switchTheme
-                              ? AppColor.black
-                              : AppColor.white,
-                          borderRadius: const BorderRadius.only(
-                                  topRight: Radius.circular(24.0),
-                                  topLeft: Radius.circular(24.0))
-                              .w),
+                          color: value.switchTheme ? AppColor.black : AppColor.white,
+                          borderRadius:
+                              const BorderRadius.only(topRight: Radius.circular(24.0), topLeft: Radius.circular(24.0)).w),
                       child: Column(
                         children: [
                           Padding(
@@ -42,8 +38,7 @@ class WorkoutTrackerScreen extends StatelessWidget {
                             child: Container(
                               height: 3.h,
                               width: 80.w,
-                              decoration: const BoxDecoration(
-                                  color: AppColor.blueLinear1),
+                              decoration: const BoxDecoration(color: AppColor.blueLinear1),
                             ),
                           ),
                           Expanded(
@@ -61,16 +56,13 @@ class WorkoutTrackerScreen extends StatelessWidget {
                                         onPressed: () {
                                           _scrollController.animateTo(
                                             420.0,
-                                            duration: const Duration(
-                                                milliseconds: 500),
+                                            duration: const Duration(milliseconds: 500),
                                             curve: Curves.easeInOut,
                                           );
                                         }),
                                   ),
                                   Padding(
-                                    padding: const EdgeInsets.only(
-                                            top: 8.0, left: 15.0, right: 15.0)
-                                        .r,
+                                    padding: const EdgeInsets.only(top: 8.0, left: 15.0, right: 15.0).r,
                                     child: Row(
                                       children: [
                                         const Text(
@@ -82,8 +74,7 @@ class WorkoutTrackerScreen extends StatelessWidget {
                                           onTap: () {},
                                           child: Text(
                                             'See more',
-                                            style: TextStyles.h3Bold
-                                                .copyWith(color: AppColor.gray),
+                                            style: TextStyles.h3Bold.copyWith(color: AppColor.gray),
                                           ),
                                         ),
                                       ],
@@ -91,9 +82,7 @@ class WorkoutTrackerScreen extends StatelessWidget {
                                   ),
                                   const WorkoutTrackerListView(),
                                   Padding(
-                                    padding: const EdgeInsets.only(
-                                            left: 15.0, top: 8.0)
-                                        .r,
+                                    padding: const EdgeInsets.only(left: 15.0, top: 8.0).r,
                                     child: const Text(
                                       'What Do You Want to Train',
                                       style: TextStyles.h2Bold,

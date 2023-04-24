@@ -32,15 +32,13 @@ class TrainingListOfWorkoutTracker extends StatelessWidget {
                       children: [
                         Text(
                           ConstList.workOutlist[index],
-                          style:
-                              TextStyles.h3Bold.copyWith(color: AppColor.black),
+                          style: TextStyles.h3Bold.copyWith(color: AppColor.black),
                         ),
                         Padding(
                           padding: const EdgeInsets.only(top: 5.0).r,
                           child: Text(
                             ConstList.caloriesBurnList[index],
-                            style: TextStyles.h3Normal
-                                .copyWith(color: AppColor.gray),
+                            style: TextStyles.h3Normal.copyWith(color: AppColor.gray),
                           ),
                         ),
                         Padding(
@@ -61,8 +59,7 @@ class TrainingListOfWorkoutTracker extends StatelessWidget {
                               onPressed: () {},
                               child: Text(
                                 'View More',
-                                style: TextStyles.h3Normal
-                                    .copyWith(color: AppColor.blueLinear1),
+                                style: TextStyles.h3Normal.copyWith(color: AppColor.blueLinear1),
                               ),
                             ),
                           ),
@@ -75,8 +72,7 @@ class TrainingListOfWorkoutTracker extends StatelessWidget {
                     children: [
                       SizedBox(
                         width: 70.w,
-                        child: SvgPicture.asset(
-                            'assets/images/WorkOutTrackerVector$index.svg'),
+                        child: SvgPicture.asset('assets/images/WorkOutTrackerVector$index.svg'),
                       )
                     ],
                   ),

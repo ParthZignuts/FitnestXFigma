@@ -9,8 +9,7 @@ class OnboardScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final provider =
-        Provider.of<OnboardingScreenProvider>(context, listen: false);
+    final provider = Provider.of<OnboardingScreenProvider>(context, listen: false);
     return Scaffold(
       body: Column(
         children: [
@@ -37,8 +36,7 @@ class OnboardScreen extends StatelessWidget {
                 DetailsOnOnboardScreen(
                     imgSrc: 'assets/images/Onboard4.svg',
                     mainContent: 'Improve Sleep \nQuality',
-                    description:
-                        'Improve the quality of your sleep withus,\ngood quality sleep can bring a good mood  '),
+                    description: 'Improve the quality of your sleep withus,\ngood quality sleep can bring a good mood  '),
               ],
               onPageChanged: (int index) {
                 provider.pageIndex = index;

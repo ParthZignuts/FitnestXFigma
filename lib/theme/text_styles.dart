@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 class TextStyles {
-
   static const h1UltraBold = TextStyle(fontSize: 28, fontWeight: FontWeight.w900);
 
   static const h1Bold = TextStyle(fontSize: 24, fontWeight: FontWeight.w900);

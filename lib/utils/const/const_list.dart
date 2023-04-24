@@ -1,4 +1,7 @@
+
+
 import 'package:another_stepper/dto/stepper_data.dart';
+import 'package:fitnestx/core/provider/provider.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 import '../../app/app.dart';
 import '../../theme/theme.dart';
@@ -19,7 +22,7 @@ class ConstList {
       ),
       inactiveIcon: const Icon(
         Icons.home,
-        color: AppColor.blueLinear1,
+        color: AppColor.gray,
       ),
     ),
     PersistentBottomNavBarItem(
@@ -29,7 +32,7 @@ class ConstList {
       ),
       inactiveIcon: const Icon(
         Icons.bar_chart,
-        color: AppColor.blueLinear1,
+        color: AppColor.gray,
       ),
     ),
     PersistentBottomNavBarItem(
@@ -37,11 +40,12 @@ class ConstList {
         Icons.search,
         color: AppColor.purple,
       ),
-      inactiveIcon: const Icon(
+      inactiveIcon:  const Icon(
         Icons.search,
-        color: AppColor.blueLinear1,
+        color: AppColor.gray,
       ),
-    ),
+      activeColorPrimary: AppColor.blueLinear1,
+     ),
     PersistentBottomNavBarItem(
       icon: const Icon(
         Icons.camera_alt_outlined,
@@ -49,7 +53,7 @@ class ConstList {
       ),
       inactiveIcon: const Icon(
         Icons.camera_alt_outlined,
-        color: AppColor.blueLinear1,
+        color: AppColor.gray,
       ),
     ),
     PersistentBottomNavBarItem(
@@ -59,7 +63,7 @@ class ConstList {
       ),
       inactiveIcon: const Icon(
         Icons.person_outline,
-        color: AppColor.blueLinear1,
+        color: AppColor.gray,
       ),
     ),
   ];

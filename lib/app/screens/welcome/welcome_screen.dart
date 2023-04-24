@@ -25,16 +25,13 @@ class WelcomeScreen extends StatelessWidget {
                     ),
                     Text(
                       'Everybody Can Train',
-                      style: TextStyles.h2Normal.copyWith(
-                          fontFamily: 'Poppins', color: AppColor.gray),
+                      style: TextStyles.h2Normal.copyWith(fontFamily: 'Poppins', color: AppColor.gray),
                     ),
                   ],
                 ),
               ),
               const Spacer(),
-              CustomSubmitButton(
-                  onPressed: () => Get.offAll(const OnboardScreen()),
-                  title: 'Get Started'),
+              CustomSubmitButton(onPressed: () => Get.offAll(const OnboardScreen()), title: 'Get Started'),
             ],
           ),
         ),

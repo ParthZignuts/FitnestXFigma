@@ -22,9 +22,7 @@ class GalleryListView extends StatelessWidget {
               Expanded(
                 child: SizedBox(
                   height: 100.h, // adjust height as needed
-                  width: MediaQuery.of(context)
-                      .size
-                      .width, // adjust width as needed
+                  width: MediaQuery.of(context).size.width, // adjust width as needed
                   child: ListView.builder(
                     physics: const BouncingScrollPhysics(),
                     scrollDirection: Axis.horizontal,
@@ -41,8 +39,7 @@ class GalleryListView extends StatelessWidget {
                                 context: context,
                                 builder: (BuildContext context) {
                                   return Center(
-                                    child: Image.asset(
-                                        'assets/images/exc$index.png'),
+                                    child: Image.asset('assets/images/exc$index.png'),
                                   );
                                 },
                               );

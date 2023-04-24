@@ -54,9 +54,7 @@ class InputFormField extends StatelessWidget {
             },
           ),
         ),
-        obscureText: visibilityIcon
-            ? Provider.of<SignupScreenProvider>(context).isVisible
-            : obscureText,
+        obscureText: visibilityIcon ? Provider.of<SignupScreenProvider>(context).isVisible : obscureText,
       ),
     );
   }

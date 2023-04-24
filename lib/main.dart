@@ -5,8 +5,7 @@ import 'theme/theme.dart';
 
 void main() {
   runApp(
-    ChangeNotifierProvider<ActivityTrackerProcider>(
-        create: (_) => ActivityTrackerProcider(), child: const MyApp()),
+    ChangeNotifierProvider<ActivityTrackerProcider>(create: (_) => ActivityTrackerProcider(), child: const MyApp()),
   );
 }
 
@@ -34,7 +33,7 @@ class MyApp extends StatelessWidget {
     return (await showDialog(
           context: context,
           builder: (context) => AlertDialog(
-            backgroundColor: AppColor.blueLinear1,
+            backgroundColor: AppColor.purpleLinear1,
             title: const Text('Are you sure?'),
             content: const Text('Do you want to exit the app?'),
             actions: <Widget>[

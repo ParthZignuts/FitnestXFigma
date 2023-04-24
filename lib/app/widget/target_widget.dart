@@ -36,8 +36,7 @@ class TargetWidget extends StatelessWidget {
                   children: [
                     Text(
                       title,
-                      style: TextStyles.h2Bold
-                          .copyWith(color: AppColor.blueLinear2),
+                      style: TextStyles.h2Bold.copyWith(color: AppColor.blueLinear2),
                     ),
                     Text(
                       subTitle,

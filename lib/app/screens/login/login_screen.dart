@@ -19,8 +19,7 @@ class LoginScreen extends StatelessWidget {
                   children: [
                     Text(
                       'Hey There',
-                      style:
-                          TextStyles.h3Normal.copyWith(fontFamily: 'Poppins'),
+                      style: TextStyles.h3Normal.copyWith(fontFamily: 'Poppins'),
                     ),
                     Text(
                       'Welcome Back',
@@ -63,8 +62,7 @@ class LoginScreen extends StatelessWidget {
                 ),
                 const Spacer(),
                 CustomSubmitButton(
-                  onPressed: () =>
-                      Get.offAll(const RegistattionSuccessScreen()),
+                  onPressed: () => Get.offAll(const RegistattionSuccessScreen()),
                   title: 'Login',
                 ),
                 TextDivider.horizontal(
@@ -79,12 +77,12 @@ class LoginScreen extends StatelessWidget {
                     children: [
                       CustomIconBtn(
                           imgUrl: 'assets/images/glogo.svg',
-                          onPressed: () => Vibration.vibrate(duration: 1000)),
+                          onPressed: () => _showDialog('Google SignIn', 'Currently Not Available')),
                       Padding(
                         padding: const EdgeInsets.only(left: 20.0).r,
                         child: CustomIconBtn(
                             imgUrl: 'assets/images/flogo.svg',
-                            onPressed: () => Vibration.vibrate(duration: 1000)),
+                            onPressed: () => _showDialog('Facebook SignIn', 'Currently Not Available')),
                       ),
                     ],
                   ),
@@ -102,8 +100,7 @@ class LoginScreen extends StatelessWidget {
                           onTap: () => Get.offAll(const SignUpScreen()),
                           child: Text(
                             'Register',
-                            style: TextStyles.h3Bold
-                                .copyWith(color: AppColor.purple),
+                            style: TextStyles.h3Bold.copyWith(color: AppColor.purple),
                           ))
                     ],
                   ),
@@ -113,6 +110,15 @@ class LoginScreen extends StatelessWidget {
           ),
         ),
       ),
+    );
+  }
+
+  void _showDialog(String title, String content) {
+    Get.defaultDialog(
+      title: title,
+      content: Text(content, style: TextStyles.h2Normal.copyWith(color: AppColor.white), textAlign: TextAlign.center),
+      backgroundColor: AppColor.blueLinear1,
+      titleStyle: const TextStyle(color: AppColor.black, fontWeight: FontWeight.w900, fontSize: 19),
     );
   }
 }

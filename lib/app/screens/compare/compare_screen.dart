@@ -1,5 +1,6 @@
 import 'package:fitnestx/app/app.dart';
 import 'package:flutter/cupertino.dart';
+import '../../../core/provider/provider.dart';
 import '../../../theme/theme.dart';
 
 class CompareScreen extends StatelessWidget {
@@ -7,7 +8,9 @@ class CompareScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final provider = Provider.of<ActivityTrackerProcider>(context);
     return Scaffold(
+      backgroundColor: provider.switchTheme ? AppColor.black : AppColor.white,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.only(top: 5.0),
@@ -24,8 +27,7 @@ class CompareScreen extends StatelessWidget {
                     ListTile(
                       title: Text(
                         'Select Month 1 ',
-                        style:
-                            TextStyles.h3Normal.copyWith(color: AppColor.gray),
+                        style: TextStyles.h3Normal.copyWith(color: AppColor.gray),
                       ),
                       leading: const Icon(
                         Icons.calendar_month_outlined,
@@ -41,8 +43,7 @@ class CompareScreen extends StatelessWidget {
                     ListTile(
                       title: Text(
                         'Select Month 2 ',
-                        style:
-                            TextStyles.h3Normal.copyWith(color: AppColor.gray),
+                        style: TextStyles.h3Normal.copyWith(color: AppColor.gray),
                       ),
                       leading: const Icon(
                         Icons.calendar_month_outlined,

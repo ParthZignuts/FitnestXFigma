@@ -71,8 +71,7 @@ class SignUpScreen2 extends StatelessWidget {
                             ),
                           ),
                           Padding(
-                            padding:
-                                const EdgeInsets.only(top: 5.0, bottom: 5.0).r,
+                            padding: const EdgeInsets.only(top: 5.0, bottom: 5.0).r,
                             child: Consumer<SignupScreenProvider>(
                               builder: (context, value, child) {
                                 return TextFormField(
@@ -85,8 +84,7 @@ class SignUpScreen2 extends StatelessWidget {
                                     fillColor: AppColor.white,
                                     hintText: (value.selectedDate == null)
                                         ? 'Select Birth Date'
-                                        : DateFormat.yMd()
-                                            .format(value.selectedDate!),
+                                        : DateFormat.yMd().format(value.selectedDate!),
                                     prefixIcon: const Icon(
                                       Icons.calendar_month_outlined,
                                       color: AppColor.blueLinear1,
@@ -104,17 +102,13 @@ class SignUpScreen2 extends StatelessWidget {
                                 icon: Icons.monitor_weight_outlined),
                           ),
                           const HeightWeightInputField(
-                              hintText: 'Your Height',
-                              imgSrc: 'assets/images/Button-Cm.svg',
-                              icon: Icons.height),
+                              hintText: 'Your Height', imgSrc: 'assets/images/Button-Cm.svg', icon: Icons.height),
                         ],
                       ),
                     ),
                     Padding(
                       padding: const EdgeInsets.only(top: 20.0).r,
-                      child: CustomSubmitButton(
-                          onPressed: () => Get.offAll(const SignUpScreen3()),
-                          title: 'Next'),
+                      child: CustomSubmitButton(onPressed: () => Get.offAll(const SignUpScreen3()), title: 'Next'),
                     )
                   ],
                 ),

@@ -11,6 +11,7 @@ class ActivityTrackerScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final provider = Provider.of<ActivityTrackerProcider>(context);
     return Scaffold(
+      backgroundColor: provider.switchTheme ? AppColor.black : AppColor.white,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.only(left: 10.0, right: 10.0, top: 5).r,
@@ -19,10 +20,7 @@ class ActivityTrackerScreen extends StatelessWidget {
               CustomAppbar(
                   leadingIcon: const Icon(CupertinoIcons.left_chevron),
                   appbarTitle: 'Activity Tracker ',
-                  onPressed: () {
-                    provider.showMore(false);
-                    Get.offAll(const MainScreen());
-                  }),
+                  onPressed: () => _closeScreen(provider, context)),
               Expanded(
                 child: SingleChildScrollView(
                   physics: const BouncingScrollPhysics(),
@@ -39,24 +37,17 @@ class ActivityTrackerScreen extends StatelessWidget {
                           child: Column(
                             children: [
                               Padding(
-                                padding:
-                                    const EdgeInsets.only(left: 8.0, right: 8.0)
-                                        .r,
+                                padding: const EdgeInsets.only(left: 8.0, right: 8.0).r,
                                 child: Row(
                                   children: [
-                                     Text('Today Target',
-                                        style: TextStyles.h2Bold.copyWith(color: AppColor.black)),
+                                    Text('Today Target', style: TextStyles.h2Bold.copyWith(color: AppColor.black)),
                                     const Spacer(),
                                     Padding(
-                                      padding: const EdgeInsets.only(
-                                              top: 8.0, bottom: 8.0)
-                                          .r,
+                                      padding: const EdgeInsets.only(top: 8.0, bottom: 8.0).r,
                                       child: Container(
                                         decoration: BoxDecoration(
-                                          borderRadius:
-                                              BorderRadius.circular(10.0).w,
-                                          gradient:
-                                              const LinearGradient(colors: [
+                                          borderRadius: BorderRadius.circular(10.0).w,
+                                          gradient: const LinearGradient(colors: [
                                             AppColor.blueLinear1,
                                             AppColor.blueLinear2,
                                           ]),
@@ -74,21 +65,12 @@ class ActivityTrackerScreen extends StatelessWidget {
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsets.only(
-                                        right: 10.0, left: 10.0)
-                                    .r,
+                                padding: const EdgeInsets.only(right: 10.0, left: 10.0).r,
                                 child: Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceAround,
+                                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                                   children: const [
-                                    TargetWidget(
-                                        title: '8L',
-                                        subTitle: 'Water Intake',
-                                        imgSrc: 'assets/images/glass 1.svg'),
-                                    TargetWidget(
-                                        title: '2400',
-                                        subTitle: 'Foot Steps',
-                                        imgSrc: 'assets/images/boots 1.svg'),
+                                    TargetWidget(title: '8L', subTitle: 'Water Intake', imgSrc: 'assets/images/glass 1.svg'),
+                                    TargetWidget(title: '2400', subTitle: 'Foot Steps', imgSrc: 'assets/images/boots 1.svg'),
                                   ],
                                 ),
                               ),
@@ -105,14 +87,12 @@ class ActivityTrackerScreen extends StatelessWidget {
                               style: TextStyles.h2Bold,
                             ),
                             const Spacer(),
-                            CheckViewMoreButton(
-                                title: 'Weekly', onPressed: () {}),
+                            CheckViewMoreButton(title: 'Weekly', onPressed: () {}),
                           ],
                         ),
                       ),
                       SvgPicture.asset('assets/images/ActivityGraph.svg'),
-                      TitleWithViewMore(
-                          provider: provider, title: 'Latest Activity'),
+                      TitleWithViewMore(provider: provider, title: 'Latest Activity'),
                       Consumer<ActivityTrackerProcider>(
                         builder: (context, value, child) {
                           return ListView.builder(
@@ -121,13 +101,10 @@ class ActivityTrackerScreen extends StatelessWidget {
                             itemCount: value.isShowMore ? 6 : 2,
                             itemBuilder: (context, index) {
                               return ListTile(
-                                leading: SvgPicture.asset(
-                                    'assets/images/Latest-Pic$index.svg'),
+                                leading: SvgPicture.asset('assets/images/Latest-Pic$index.svg'),
                                 trailing: IconButton(
                                   onPressed: () {},
-                                  icon: const Icon(
-                                      Icons.keyboard_arrow_right_outlined,
-                                      color: AppColor.purple),
+                                  icon: const Icon(Icons.keyboard_arrow_right_outlined, color: AppColor.purple),
                                 ),
                                 title: Text(latestActivityTitle[index]),
                                 subtitle: Column(
@@ -153,5 +130,10 @@ class ActivityTrackerScreen extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  void _closeScreen(ActivityTrackerProcider provider, BuildContext context) {
+    provider.showMore(false);
+    Navigator.pop(context);
   }
 }

@@ -18,8 +18,7 @@ class SearchProgressList extends StatelessWidget {
           leading: SvgPicture.asset('assets/images/Latest-Pic$index.svg'),
           trailing: IconButton(
             onPressed: () {},
-            icon: const Icon(Icons.keyboard_arrow_right_outlined,
-                color: AppColor.purple),
+            icon: const Icon(Icons.keyboard_arrow_right_outlined, color: AppColor.purple),
           ),
           title: Text(latestActivityTitle[index]),
           subtitle: Column(

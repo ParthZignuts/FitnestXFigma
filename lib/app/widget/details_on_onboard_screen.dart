@@ -16,12 +16,10 @@ class DetailsOnOnboardScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Expanded(
-          child: SvgPicture.asset(
-            imgSrc,
-            fit: BoxFit.fill,
-            width: 375.w,
-          ),
+        SvgPicture.asset(
+          imgSrc,
+          fit: BoxFit.fill,
+          width: 375.w,
         ),
         Padding(
           padding: const EdgeInsets.only(

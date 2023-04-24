@@ -9,9 +9,7 @@ class SignupScreenProvider extends ChangeNotifier {
   PageController pageController = PageController();
 
   void datePicker(BuildContext context) async {
-    DateTime? pickerDate = await
-    showDatePicker
-      (
+    DateTime? pickerDate = await showDatePicker(
       context: context,
       initialDate: DateTime.now(),
       firstDate: DateTime.now(),
@@ -19,10 +17,11 @@ class SignupScreenProvider extends ChangeNotifier {
     );
 
     if (pickerDate != null) {
-        selectedDate = pickerDate;
+      selectedDate = pickerDate;
     }
     notifyListeners();
   }
+
   changePasswordVisibility() {
     isVisible = !isVisible;
     notifyListeners();

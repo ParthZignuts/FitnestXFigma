@@ -1,7 +1,6 @@
-
 import '../../../app/app.dart';
 
-class HomeScreenProvider extends ChangeNotifier{
+class HomeScreenProvider extends ChangeNotifier {
   int tabIndex = 0;
 
   PageController pageController = PageController();

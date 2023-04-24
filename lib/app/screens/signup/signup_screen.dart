@@ -1,3 +1,5 @@
+import 'package:flutter/cupertino.dart';
+
 import '../../app.dart';
 import '../../../core/provider/provider.dart';
 import '../../../theme/theme.dart';
@@ -12,16 +14,14 @@ class SignUpScreen extends StatelessWidget {
       body: SafeArea(
         child: Center(
           child: Padding(
-            padding:
-                const EdgeInsets.only(left: 15.0, right: 15.0, top: 10.0).r,
+            padding: const EdgeInsets.only(left: 15.0, right: 15.0, top: 10.0).r,
             child: Column(
               children: [
                 Column(
                   children: [
                     Text(
                       'Hey There',
-                      style:
-                          TextStyles.h3Normal.copyWith(fontFamily: 'Poppins'),
+                      style: TextStyles.h3Normal.copyWith(fontFamily: 'Poppins'),
                     ),
                     Text(
                       'Create an Account',
@@ -79,10 +79,8 @@ class SignUpScreen extends StatelessWidget {
                       builder: (context, value, child) {
                         return Checkbox(
                           value: value.rememberMe,
-                          onChanged: (values) =>
-                              value.onRememberMeChanged(values!),
-                          fillColor:
-                              MaterialStateProperty.all(AppColor.blueLinear1),
+                          onChanged: (values) => value.onRememberMeChanged(values!),
+                          fillColor: MaterialStateProperty.all(AppColor.blueLinear1),
                         );
                       },
                     ),
@@ -93,9 +91,15 @@ class SignUpScreen extends StatelessWidget {
                   ],
                 ),
                 const Spacer(),
-                CustomSubmitButton(
-                  onPressed: () => Get.offAll(const SignUpScreen2()),
-                  title: 'Register',
+                Consumer<SignupScreenProvider>(
+                  builder: (context, value, child) {
+                    return CustomSubmitButton(
+                      onPressed: () => value.rememberMe
+                          ? Get.offAll(const SignUpScreen2())
+                          : _showDialog('To Continue', 'Please Fill The Form and Accept Term And Condition !!'),
+                      title: 'Register',
+                    );
+                  },
                 ),
                 TextDivider.horizontal(
                     text: const Text(
@@ -107,11 +111,15 @@ class SignUpScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     CustomIconBtn(
-                        imgUrl: 'assets/images/glogo.svg', onPressed: () {}),
+                      imgUrl: 'assets/images/glogo.svg',
+                      onPressed: () => _showDialog('Google SignUp', 'Currently Not Available'),
+                    ),
                     Padding(
                       padding: const EdgeInsets.only(left: 20.0).r,
                       child: CustomIconBtn(
-                          imgUrl: 'assets/images/flogo.svg', onPressed: () {}),
+                        imgUrl: 'assets/images/flogo.svg',
+                        onPressed: () => _showDialog('Facebook SignUp', 'Currently Not Available'),
+                      ),
                     ),
                   ],
                 ),
@@ -129,8 +137,7 @@ class SignUpScreen extends StatelessWidget {
                           onTap: () => Get.offAll(const LoginScreen()),
                           child: Text(
                             'Login',
-                            style: TextStyles.h3Bold
-                                .copyWith(color: AppColor.purple),
+                            style: TextStyles.h3Bold.copyWith(color: AppColor.purple),
                           ))
                     ],
                   ),
@@ -140,6 +147,14 @@ class SignUpScreen extends StatelessWidget {
           ),
         ),
       ),
+    );
+  }
+  void _showDialog(String title, String content) {
+    Get.defaultDialog(
+      title: title,
+      content: Text(content, style: TextStyles.h2Normal.copyWith(color: AppColor.white), textAlign: TextAlign.center),
+      backgroundColor: AppColor.blueLinear1,
+      titleStyle: const TextStyle(color: AppColor.black, fontWeight: FontWeight.w900, fontSize: 19),
     );
   }
 }

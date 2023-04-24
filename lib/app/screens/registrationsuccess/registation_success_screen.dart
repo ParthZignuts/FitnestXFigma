@@ -30,9 +30,7 @@ class RegistattionSuccessScreen extends StatelessWidget {
                   textAlign: TextAlign.center,
                 ),
                 const Spacer(),
-                CustomSubmitButton(
-                    onPressed: () => Get.offAll(const MainScreen()),
-                    title: 'Go To Home'),
+                CustomSubmitButton(onPressed: () => Get.offAll(const MainScreen()), title: 'Go To Home'),
               ],
             ),
           ),

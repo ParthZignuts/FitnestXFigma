@@ -15,8 +15,7 @@ class OnboardNextScreenBtn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Consumer<OnboardingScreenProvider>(
-        builder: (BuildContext context, value, Widget? child) {
+    return Consumer<OnboardingScreenProvider>(builder: (BuildContext context, value, Widget? child) {
       return Align(
         alignment: Alignment.bottomRight,
         child: Padding(

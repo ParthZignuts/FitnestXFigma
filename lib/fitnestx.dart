@@ -21,9 +21,6 @@ class FitnestX extends StatelessWidget {
               create: (context) => SignupScreenProvider(),
             ),
             ChangeNotifierProvider(
-              create: (context) => ActivityTrackerProcider(),
-            ),
-            ChangeNotifierProvider(
               create: (context) => HomeScreenProvider(),
             ),
           ],
@@ -31,10 +28,8 @@ class FitnestX extends StatelessWidget {
             builder: (context, value, child) {
               return GetMaterialApp(
                 theme: value.switchTheme
-                    ? FlexColorScheme.dark(scheme: FlexScheme.purpleM3)
-                        .toTheme
-                    : FlexColorScheme.light(scheme: FlexScheme.purpleM3)
-                        .toTheme,
+                    ? FlexColorScheme.dark(scheme: FlexScheme.deepPurple).toTheme
+                    : FlexColorScheme.light(scheme: FlexScheme.deepPurple).toTheme,
                 home: const SplashScreen(),
                 // home: const MainScreen(),
               );

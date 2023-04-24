@@ -18,3 +18,4 @@ export './activitytracker/activity_tracker_screen.dart';
 export './home/home_screen_pageview.dart';
 export './compare/compare_screen.dart';
 export 'signup/signup_screen.dart';
+export './about/about_screen.dart';

@@ -9,7 +9,9 @@ class NotificationScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final provider = Provider.of<ActivityTrackerProcider>(context);
     return Scaffold(
+      backgroundColor: provider.switchTheme ? AppColor.black : AppColor.white,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.only(left: 8.0, right: 8.0, top: 5.0).r,
@@ -34,19 +36,16 @@ class NotificationScreen extends StatelessWidget {
                               context: context,
                               builder: (BuildContext context) {
                                 return Center(
-                                  child: SvgPicture.asset(
-                                      'assets/images/Ellipse$index.svg'),
+                                  child: SvgPicture.asset('assets/images/Ellipse$index.svg'),
                                 );
                               },
                             );
                           },
-                          child: SvgPicture.asset(
-                              'assets/images/Ellipse$index.svg'),
+                          child: SvgPicture.asset('assets/images/Ellipse$index.svg'),
                         ),
                         trailing: IconButton(
                           onPressed: () {},
-                          icon: const Icon(Icons.more_vert_outlined,
-                              color: AppColor.gray),
+                          icon: const Icon(Icons.more_vert_outlined, color: AppColor.gray),
                         ),
                         title: Text(notificationTitle[index]),
                         subtitle: Column(

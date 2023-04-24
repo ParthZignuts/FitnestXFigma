@@ -15,8 +15,7 @@ class CaloriesIndicator extends StatelessWidget {
         appearance: CircularSliderAppearance(
           size: 170.r,
           angleRange: 360,
-          customWidths:
-              CustomSliderWidths(handlerSize: 0, progressBarWidth: 10.0),
+          customWidths: CustomSliderWidths(handlerSize: 0, progressBarWidth: 10.0),
           customColors: CustomSliderColors(
             hideShadow: true,
             trackColors: ConstList.listOfColor,

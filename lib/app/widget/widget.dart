@@ -24,3 +24,4 @@ export './heartbeatchart.dart';
 export 'package:another_stepper/widgets/another_stepper.dart';
 export 'package:flutter_svg/svg.dart';
 export 'package:sleek_circular_slider/sleek_circular_slider.dart';
+export 'package:marquee/marquee.dart';

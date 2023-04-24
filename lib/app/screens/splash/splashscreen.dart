@@ -14,8 +14,7 @@ class SplashScreen extends StatelessWidget {
     return Scaffold(
       body: Container(
         decoration: const BoxDecoration(
-          gradient: LinearGradient(
-              colors: [AppColor.blueLinear1, AppColor.blueLinear2]),
+          gradient: LinearGradient(colors: [AppColor.blueLinear1, AppColor.blueLinear2]),
         ),
         child: Center(
           child: SvgPicture.asset('assets/images/FitnestXSplash.svg'),

@@ -24,7 +24,12 @@ class CustomAppbar extends StatelessWidget {
           style: TextStyles.h2Bold,
         ),
         const Spacer(),
-        IconButton(onPressed: () {}, icon: const Icon(Icons.info_outline))
+        IconButton(
+            onPressed: () => showDialog(
+                  context: context,
+                  builder: (context) => const AboutScreen(),
+                ),
+            icon: const Icon(Icons.info_outline))
       ],
     );
   }
