@@ -1,13 +1,6 @@
-import 'package:fitnestx/app/screens/onboard/onboardscreen.dart';
-import 'package:fitnestx/app/screens/splash/splashscreen.dart';
-import 'package:fitnestx/theme/app_color.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/get_navigation/src/root/get_material_app.dart';
-import 'package:provider/provider.dart';
-
-import 'core/provider/onboarding_screen_provider.dart';
+import 'package:fitnestx/core/provider/provider.dart';
+import './app/app.dart';
+import 'package:flex_color_scheme/flex_color_scheme.dart';
 
 class FitnestX extends StatelessWidget {
   const FitnestX({Key? key}) : super(key: key);
@@ -24,18 +17,23 @@ class FitnestX extends StatelessWidget {
             ChangeNotifierProvider(
               create: (context) => OnboardingScreenProvider(),
             ),
-          ],
-          child: GetMaterialApp(
-            theme: ThemeData(
-              primaryColor: AppColor.blueLinear1,
+            ChangeNotifierProvider(
+              create: (context) => SignupScreenProvider(),
             ),
-            title: 'FitnestX',
-            debugShowCheckedModeBanner: false,
-            routes: {
-              '/onboard': (context) => const OnboardScreen(),
-              '/': (context) => const SplashScreen(),
+            ChangeNotifierProvider(
+              create: (context) => HomeScreenProvider(),
+            ),
+          ],
+          child: Consumer<ActivityTrackerProcider>(
+            builder: (context, value, child) {
+              return GetMaterialApp(
+                theme: value.switchTheme
+                    ? FlexColorScheme.dark(scheme: FlexScheme.deepPurple).toTheme
+                    : FlexColorScheme.light(scheme: FlexScheme.deepPurple).toTheme,
+                home: const SplashScreen(),
+                // home: const MainScreen(),
+              );
             },
-            initialRoute: '/',
           ),
         );
       },

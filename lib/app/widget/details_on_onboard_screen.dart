@@ -1,6 +1,5 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../theme/theme.dart';
+import '../app.dart';
 
 class DetailsOnOnboardScreen extends StatelessWidget {
   const DetailsOnOnboardScreen(
@@ -17,14 +16,15 @@ class DetailsOnOnboardScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Image.asset(
+        SvgPicture.asset(
           imgSrc,
           fit: BoxFit.fill,
           width: 375.w,
-          height: 350.h,
         ),
         Padding(
-          padding: EdgeInsets.only(top: 45.0.sp,left: 20.0.sp,right: 20.0.sp),
+          padding: const EdgeInsets.only(
+                  top: 20.0, left: 20.0, right: 20.0, bottom: 20.0)
+              .r,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -32,7 +32,7 @@ class DetailsOnOnboardScreen extends StatelessWidget {
                 mainContent,
                 style: TextStyles.h1Bold.copyWith(fontFamily: 'Poppins'),
               ),
-              SizedBox(height: 15.h),
+              SizedBox(height: 5.h),
               Text(
                 description,
                 textAlign: TextAlign.start,
